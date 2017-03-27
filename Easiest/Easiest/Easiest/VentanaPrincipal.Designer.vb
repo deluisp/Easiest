@@ -561,7 +561,7 @@ Partial Class VentanaPrincipal
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.Name = "VentanaPrincipal"
-        Me.Text = "VentanaPrincipal"
+        Me.Text = "Principal"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.ToolStrip.ResumeLayout(False)
