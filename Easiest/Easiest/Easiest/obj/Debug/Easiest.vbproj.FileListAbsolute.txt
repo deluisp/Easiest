@@ -29,3 +29,7 @@ D:\Visual\Easiest\Easiest\Easiest\bin\Debug\MySql.Data.Entity.EF6.xml
 D:\Visual\Easiest\Easiest\Easiest\bin\Debug\MySql.Web.xml
 D:\Visual\Easiest\Easiest\Easiest\obj\Debug\Easiest.exe
 D:\Visual\Easiest\Easiest\Easiest\obj\Debug\Easiest.pdb
+C:\Users\Deluisp\Source\Repos\Easiest\Easiest\Easiest\Easiest\bin\Debug\Easiest.exe.config
+C:\Users\Deluisp\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.exe
+C:\Users\Deluisp\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.xml
+C:\Users\Deluisp\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.pdb
