@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public NotInheritable Class DBManager
 
-    Public Shared CadenaConexion As String = "server='localhost';database='proyecto';user id='root';password=''"
+    Public Shared CadenaConexion As String = "server='localhost';database='easiest';user id='root';password=''"
     Public Shared OConexion As New MySqlConnection
     Public Shared ODataAdapter As New MySqlDataAdapter()
     Public Shared OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
