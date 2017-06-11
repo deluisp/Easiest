@@ -78,7 +78,13 @@
   <ItemGroup>
     <Compile Include="Clases\DBManager.vb" />
     <Compile Include="Clases\Empleado.vb" />
+    <Compile Include="Clases\Ingrediente.vb" />
+    <Compile Include="Clases\IngredienteCategoria.vb" />
+    <Compile Include="Clases\IngredienteTipo.vb" />
     <Compile Include="Clases\ListaEmpleados.vb" />
+    <Compile Include="Clases\ListaIngredientes.vb" />
+    <Compile Include="Clases\ListaIngredientesCategorias.vb" />
+    <Compile Include="Clases\ListaIngredientesTipos.vb" />
     <Compile Include="Clases\ListaLogs.vb" />
     <Compile Include="Clases\ListaPermisos.vb" />
     <Compile Include="Clases\ListaUsuarios.vb" />
@@ -89,6 +95,12 @@
       <DependentUpon>FrmAltaEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAltaEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltaIngrediente.Designer.vb">
+      <DependentUpon>FrmAltaIngrediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltaIngrediente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAltaUsuarios.Designer.vb">
@@ -177,6 +189,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmAltaEmpleado.resx">
       <DependentUpon>FrmAltaEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltaIngrediente.resx">
+      <DependentUpon>FrmAltaIngrediente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.vb</DependentUpon>

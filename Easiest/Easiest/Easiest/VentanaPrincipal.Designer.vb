@@ -90,6 +90,11 @@ Partial Class VentanaPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GestiónCartaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesAnadir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesModificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -97,7 +102,7 @@ Partial Class VentanaPrincipal
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.UsuariosMenu, Me.GestiónEToolStripMenuItem, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.ConsultasToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.UsuariosMenu, Me.GestiónEToolStripMenuItem, Me.GestiónCartaToolStripMenuItem, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.ConsultasToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -550,6 +555,38 @@ Partial Class VentanaPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
+        'GestiónCartaToolStripMenuItem
+        '
+        Me.GestiónCartaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngredientesToolStripMenuItem})
+        Me.GestiónCartaToolStripMenuItem.Name = "GestiónCartaToolStripMenuItem"
+        Me.GestiónCartaToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.GestiónCartaToolStripMenuItem.Text = "Gestión Carta"
+        '
+        'IngredientesToolStripMenuItem
+        '
+        Me.IngredientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnIngredientesAnadir, Me.BtnIngredientesModificar, Me.BtnIngredientesEliminar})
+        Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
+        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IngredientesToolStripMenuItem.Text = "Ingredientes"
+        '
+        'BtnIngredientesAnadir
+        '
+        Me.BtnIngredientesAnadir.Name = "BtnIngredientesAnadir"
+        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesAnadir.Text = "Añadir"
+        '
+        'BtnIngredientesModificar
+        '
+        Me.BtnIngredientesModificar.Name = "BtnIngredientesModificar"
+        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesModificar.Text = "Modificar"
+        '
+        'BtnIngredientesEliminar
+        '
+        Me.BtnIngredientesEliminar.Name = "BtnIngredientesEliminar"
+        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesEliminar.Text = "Eliminar"
+        '
         'VentanaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -637,4 +674,9 @@ Partial Class VentanaPrincipal
     Friend WithEvents AltasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificaciónDeEmpleadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BajaDeEmpleadoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestiónCartaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IngredientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnIngredientesAnadir As ToolStripMenuItem
+    Friend WithEvents BtnIngredientesModificar As ToolStripMenuItem
+    Friend WithEvents BtnIngredientesEliminar As ToolStripMenuItem
 End Class

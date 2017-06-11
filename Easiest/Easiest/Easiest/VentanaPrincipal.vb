@@ -194,4 +194,11 @@ Public Class VentanaPrincipal
     Private Sub BajaDeEmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaDeEmpleadoToolStripMenuItem.Click
         FrmBajaEmpleados.Show()
     End Sub
+
+    Private Sub BtnIngredientesAnadir_Click(sender As Object, e As EventArgs) Handles BtnIngredientesAnadir.Click
+        Dim FrmAltaIngrediente As New FrmAltaIngrediente
+        FrmAltaIngrediente.MdiParent = Me
+        FrmAltaIngrediente.Show()
+        FrmAltaIngrediente.Show()
+    End Sub
 End Class

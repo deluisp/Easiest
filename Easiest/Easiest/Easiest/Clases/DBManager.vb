@@ -24,6 +24,15 @@ Public NotInheritable Class DBManager
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM empleados", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
         ODataAdapter.Fill(ODataSet, "empleados")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes_categorias", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "ingredientes_categorias")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes_tipos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "ingredientes_tipos")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "ingredientes")
         OConexion.Close()
     End Sub
 
@@ -64,6 +73,42 @@ Public NotInheritable Class DBManager
             ListaPermisos.Lista.Add(NuevoPermiso)
         Next
         Return ListaPermisos
+    End Function
+
+    Public Function CargarIngredientesCategorias() As ListaIngredientesCategorias
+        Dim ListaIngredientesCategorias As New ListaIngredientesCategorias
+        For contador = 0 To ODataSet.Tables("ingredientes_categorias").Rows.Count - 1
+            Dim NuevoIngredienteCategoria As New IngredienteCategoria
+            NuevoIngredienteCategoria.Id = ODataSet.Tables("ingredientes_categorias").Rows(contador).Item("id")
+            NuevoIngredienteCategoria.Nombre = ODataSet.Tables("ingredientes_categorias").Rows(contador).Item("nombre")
+            ListaIngredientesCategorias.Lista.Add(NuevoIngredienteCategoria)
+        Next
+        Return ListaIngredientesCategorias
+    End Function
+
+    Public Function CargarIngredientesTipos() As ListaIngredientesTipos
+        Dim ListaIngredientesTipos As New ListaIngredientesTipos
+        For contador = 0 To ODataSet.Tables("ingredientes_tipos").Rows.Count - 1
+            Dim NuevoIngredienteTipo As New IngredienteTipo
+            NuevoIngredienteTipo.Id = ODataSet.Tables("ingredientes_tipos").Rows(contador).Item("id")
+            NuevoIngredienteTipo.Nombre = ODataSet.Tables("ingredientes_tipos").Rows(contador).Item("nombre")
+            NuevoIngredienteTipo.Categoria = ODataSet.Tables("ingredientes_tipos").Rows(contador).Item("categoria")
+            ListaIngredientesTipos.Lista.Add(NuevoIngredienteTipo)
+        Next
+        Return ListaIngredientesTipos
+    End Function
+
+    Public Function CargarIngredientes() As ListaIngredientes
+        Dim ListaIngredientes As New ListaIngredientes
+        For contador = 0 To ODataSet.Tables("ingredientes").Rows.Count - 1
+            Dim NuevoIngrediente As New Ingrediente
+            NuevoIngrediente.Id = ODataSet.Tables("ingredientes").Rows(contador).Item("id")
+            NuevoIngrediente.Nombre = ODataSet.Tables("ingredientes").Rows(contador).Item("nombre")
+            NuevoIngrediente.Tipo = ODataSet.Tables("ingredientes").Rows(contador).Item("tipo")
+            NuevoIngrediente.Descripcion = ODataSet.Tables("ingredientes").Rows(contador).Item("descripcion")
+            ListaIngredientes.Lista.Add(NuevoIngrediente)
+        Next
+        Return ListaIngredientes
     End Function
 
     Public Function CargarEmpleados() As ListaEmpleados
