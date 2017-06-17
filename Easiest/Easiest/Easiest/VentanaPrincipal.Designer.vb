@@ -47,6 +47,11 @@ Partial Class VentanaPrincipal
         Me.AltasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificaciónDeEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaDeEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestiónCartaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesAnadir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesModificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnIngredientesEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -90,11 +95,10 @@ Partial Class VentanaPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.GestiónCartaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnIngredientesAnadir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnIngredientesModificar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnIngredientesEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosAnadir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosModificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -250,6 +254,38 @@ Partial Class VentanaPrincipal
         Me.BajaDeEmpleadoToolStripMenuItem.Name = "BajaDeEmpleadoToolStripMenuItem"
         Me.BajaDeEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
         Me.BajaDeEmpleadoToolStripMenuItem.Text = "Baja de Empleado"
+        '
+        'GestiónCartaToolStripMenuItem
+        '
+        Me.GestiónCartaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngredientesToolStripMenuItem, Me.PlatosToolStripMenuItem})
+        Me.GestiónCartaToolStripMenuItem.Name = "GestiónCartaToolStripMenuItem"
+        Me.GestiónCartaToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.GestiónCartaToolStripMenuItem.Text = "Gestión Carta"
+        '
+        'IngredientesToolStripMenuItem
+        '
+        Me.IngredientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnIngredientesAnadir, Me.BtnIngredientesModificar, Me.BtnIngredientesEliminar})
+        Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
+        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IngredientesToolStripMenuItem.Text = "Ingredientes"
+        '
+        'BtnIngredientesAnadir
+        '
+        Me.BtnIngredientesAnadir.Name = "BtnIngredientesAnadir"
+        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesAnadir.Text = "Añadir"
+        '
+        'BtnIngredientesModificar
+        '
+        Me.BtnIngredientesModificar.Name = "BtnIngredientesModificar"
+        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesModificar.Text = "Modificar"
+        '
+        'BtnIngredientesEliminar
+        '
+        Me.BtnIngredientesEliminar.Name = "BtnIngredientesEliminar"
+        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesEliminar.Text = "Eliminar"
         '
         'EditMenu
         '
@@ -555,37 +591,30 @@ Partial Class VentanaPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'GestiónCartaToolStripMenuItem
+        'PlatosToolStripMenuItem
         '
-        Me.GestiónCartaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngredientesToolStripMenuItem})
-        Me.GestiónCartaToolStripMenuItem.Name = "GestiónCartaToolStripMenuItem"
-        Me.GestiónCartaToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
-        Me.GestiónCartaToolStripMenuItem.Text = "Gestión Carta"
+        Me.PlatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnPlatosAnadir, Me.BtnPlatosModificar, Me.BtnPlatosEliminar})
+        Me.PlatosToolStripMenuItem.Name = "PlatosToolStripMenuItem"
+        Me.PlatosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PlatosToolStripMenuItem.Text = "Platos"
         '
-        'IngredientesToolStripMenuItem
+        'BtnPlatosAnadir
         '
-        Me.IngredientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnIngredientesAnadir, Me.BtnIngredientesModificar, Me.BtnIngredientesEliminar})
-        Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
-        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.IngredientesToolStripMenuItem.Text = "Ingredientes"
+        Me.BtnPlatosAnadir.Name = "BtnPlatosAnadir"
+        Me.BtnPlatosAnadir.Size = New System.Drawing.Size(152, 22)
+        Me.BtnPlatosAnadir.Text = "Añadir"
         '
-        'BtnIngredientesAnadir
+        'BtnPlatosModificar
         '
-        Me.BtnIngredientesAnadir.Name = "BtnIngredientesAnadir"
-        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(152, 22)
-        Me.BtnIngredientesAnadir.Text = "Añadir"
+        Me.BtnPlatosModificar.Name = "BtnPlatosModificar"
+        Me.BtnPlatosModificar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnPlatosModificar.Text = "Modificar"
         '
-        'BtnIngredientesModificar
+        'BtnPlatosEliminar
         '
-        Me.BtnIngredientesModificar.Name = "BtnIngredientesModificar"
-        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(152, 22)
-        Me.BtnIngredientesModificar.Text = "Modificar"
-        '
-        'BtnIngredientesEliminar
-        '
-        Me.BtnIngredientesEliminar.Name = "BtnIngredientesEliminar"
-        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(152, 22)
-        Me.BtnIngredientesEliminar.Text = "Eliminar"
+        Me.BtnPlatosEliminar.Name = "BtnPlatosEliminar"
+        Me.BtnPlatosEliminar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnPlatosEliminar.Text = "Eliminar"
         '
         'VentanaPrincipal
         '
@@ -679,4 +708,8 @@ Partial Class VentanaPrincipal
     Friend WithEvents BtnIngredientesAnadir As ToolStripMenuItem
     Friend WithEvents BtnIngredientesModificar As ToolStripMenuItem
     Friend WithEvents BtnIngredientesEliminar As ToolStripMenuItem
+    Friend WithEvents PlatosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnPlatosAnadir As ToolStripMenuItem
+    Friend WithEvents BtnPlatosModificar As ToolStripMenuItem
+    Friend WithEvents BtnPlatosEliminar As ToolStripMenuItem
 End Class

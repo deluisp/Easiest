@@ -55,7 +55,7 @@ Partial Class FrmAltaIngrediente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(32, 58)
+        Me.Label2.Location = New System.Drawing.Point(32, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class FrmAltaIngrediente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(32, 85)
+        Me.Label3.Location = New System.Drawing.Point(32, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 13)
         Me.Label3.TabIndex = 3
@@ -82,7 +82,7 @@ Partial Class FrmAltaIngrediente
         'CmbTipo
         '
         Me.CmbTipo.FormattingEnabled = True
-        Me.CmbTipo.Location = New System.Drawing.Point(225, 55)
+        Me.CmbTipo.Location = New System.Drawing.Point(225, 82)
         Me.CmbTipo.Name = "CmbTipo"
         Me.CmbTipo.Size = New System.Drawing.Size(164, 21)
         Me.CmbTipo.TabIndex = 5
@@ -90,7 +90,7 @@ Partial Class FrmAltaIngrediente
         'CmbCategoria
         '
         Me.CmbCategoria.FormattingEnabled = True
-        Me.CmbCategoria.Location = New System.Drawing.Point(225, 82)
+        Me.CmbCategoria.Location = New System.Drawing.Point(225, 55)
         Me.CmbCategoria.Name = "CmbCategoria"
         Me.CmbCategoria.Size = New System.Drawing.Size(164, 21)
         Me.CmbCategoria.TabIndex = 6
@@ -123,7 +123,7 @@ Partial Class FrmAltaIngrediente
         '
         'BtnAnadirTipo
         '
-        Me.BtnAnadirTipo.Location = New System.Drawing.Point(395, 55)
+        Me.BtnAnadirTipo.Location = New System.Drawing.Point(395, 82)
         Me.BtnAnadirTipo.Name = "BtnAnadirTipo"
         Me.BtnAnadirTipo.Size = New System.Drawing.Size(44, 21)
         Me.BtnAnadirTipo.TabIndex = 10
@@ -132,7 +132,7 @@ Partial Class FrmAltaIngrediente
         '
         'BtnAnadirCategoria
         '
-        Me.BtnAnadirCategoria.Location = New System.Drawing.Point(395, 82)
+        Me.BtnAnadirCategoria.Location = New System.Drawing.Point(395, 55)
         Me.BtnAnadirCategoria.Name = "BtnAnadirCategoria"
         Me.BtnAnadirCategoria.Size = New System.Drawing.Size(44, 21)
         Me.BtnAnadirCategoria.TabIndex = 11

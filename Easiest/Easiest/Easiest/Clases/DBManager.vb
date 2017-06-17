@@ -166,6 +166,22 @@ Public NotInheritable Class DBManager
         ODataSet.Tables("usuarios").AcceptChanges()
     End Sub
 
+    Public Sub AddNewIngrediente(ByVal Ingrediente As Ingrediente)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+
+        Dim ODataRow As DataRow
+        ODataRow = ODataSet.Tables("ingredientes").NewRow
+        ODataRow("id") = Ingrediente.Id
+        ODataRow("nombre") = Ingrediente.Nombre
+        ODataRow("tipo") = Ingrediente.Tipo
+        ODataRow("descripcion") = Ingrediente.Descripcion
+        ODataSet.Tables("ingredientes").Rows.Add(ODataRow)
+
+        ODataAdapter.Update(ODataSet, "ingredientes")
+        ODataSet.Tables("ingredientes").AcceptChanges()
+    End Sub
+
     Public Sub AddNewPermiso(ByVal Permiso As Permiso)
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM permisos", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
