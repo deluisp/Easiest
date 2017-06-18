@@ -12,9 +12,10 @@
     End Sub
 
     Private Sub BtnAnadir_Click(sender As Object, e As EventArgs) Handles BtnAnadir.Click
-        Dim IdPlato = Main.ListaPlatos.Nuevo(TxtNombre.Text, TxtDescripcion.Text, RdbBebida.Checked)
+        Dim IdPlato = Main.ListaPlatos.Nuevo(TxtNombre.Text, TxtDescripcion.Text, RdbBebida.Checked, TxtPrecio.Text)
         For i = 0 To Lb2.Items.Count - 1
             Main.ListaPlatosIngredientes.Nuevo(IdPlato, Main.ListaIngredientes.Buscar(Lb2.Items(i).ToString))
         Next
     End Sub
+
 End Class

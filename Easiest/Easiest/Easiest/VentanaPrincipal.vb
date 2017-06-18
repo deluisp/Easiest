@@ -206,4 +206,10 @@ Public Class VentanaPrincipal
         FrmAltaPlato.MdiParent = Me
         FrmAltaPlato.Show()
     End Sub
+
+    Private Sub BtnPlatosModificar_Click(sender As Object, e As EventArgs) Handles BtnPlatosModificar.Click
+        Dim FrmModificarPlato As New FrmModificarPlato
+        FrmModificarPlato.MdiParent = Me
+        FrmModificarPlato.Show()
+    End Sub
 End Class

@@ -113,10 +113,10 @@
     <Compile Include="FrmAltaUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAnadirPlato.Designer.vb">
-      <DependentUpon>FrmAnadirPlato.vb</DependentUpon>
+    <Compile Include="FrmAltaPlato.Designer.vb">
+      <DependentUpon>FrmAltaPlato.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAnadirPlato.vb">
+    <Compile Include="FrmAltaPlato.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBajaEmpleados.Designer.vb">
@@ -153,6 +153,12 @@
       <DependentUpon>FrmModificarEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmModificarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarPlato.Designer.vb">
+      <DependentUpon>FrmModificarPlato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarPlato.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModificarUsuarios.Designer.vb">
@@ -206,8 +212,8 @@
     <EmbeddedResource Include="FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAnadirPlato.resx">
-      <DependentUpon>FrmAnadirPlato.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAltaPlato.resx">
+      <DependentUpon>FrmAltaPlato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaEmpleados.resx">
       <DependentUpon>FrmBajaEmpleados.vb</DependentUpon>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarEmpleado.resx">
       <DependentUpon>FrmModificarEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarPlato.resx">
+      <DependentUpon>FrmModificarPlato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarUsuarios.resx">
       <DependentUpon>FrmModificarUsuarios.vb</DependentUpon>

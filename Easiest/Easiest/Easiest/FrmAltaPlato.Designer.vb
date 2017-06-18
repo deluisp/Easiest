@@ -38,6 +38,8 @@ Partial Class FrmAltaPlato
         Me.Button4 = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnAnadir = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtPrecio = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -52,7 +54,7 @@ Partial Class FrmAltaPlato
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 34)
+        Me.Label2.Location = New System.Drawing.Point(12, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 1
@@ -61,7 +63,7 @@ Partial Class FrmAltaPlato
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 58)
+        Me.Label3.Location = New System.Drawing.Point(12, 86)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 13)
         Me.Label3.TabIndex = 2
@@ -76,7 +78,7 @@ Partial Class FrmAltaPlato
         '
         'TxtDescripcion
         '
-        Me.TxtDescripcion.Location = New System.Drawing.Point(129, 55)
+        Me.TxtDescripcion.Location = New System.Drawing.Point(129, 83)
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(186, 147)
         Me.TxtDescripcion.TabIndex = 4
@@ -85,7 +87,7 @@ Partial Class FrmAltaPlato
         'RdbComida
         '
         Me.RdbComida.AutoSize = True
-        Me.RdbComida.Location = New System.Drawing.Point(129, 32)
+        Me.RdbComida.Location = New System.Drawing.Point(129, 60)
         Me.RdbComida.Name = "RdbComida"
         Me.RdbComida.Size = New System.Drawing.Size(60, 17)
         Me.RdbComida.TabIndex = 5
@@ -96,7 +98,7 @@ Partial Class FrmAltaPlato
         'RdbBebida
         '
         Me.RdbBebida.AutoSize = True
-        Me.RdbBebida.Location = New System.Drawing.Point(225, 32)
+        Me.RdbBebida.Location = New System.Drawing.Point(225, 60)
         Me.RdbBebida.Name = "RdbBebida"
         Me.RdbBebida.Size = New System.Drawing.Size(58, 17)
         Me.RdbBebida.TabIndex = 6
@@ -107,7 +109,7 @@ Partial Class FrmAltaPlato
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(331, 34)
+        Me.Label4.Location = New System.Drawing.Point(331, 62)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 7
@@ -116,7 +118,7 @@ Partial Class FrmAltaPlato
         'Lb1
         '
         Me.Lb1.FormattingEnabled = True
-        Me.Lb1.Location = New System.Drawing.Point(334, 55)
+        Me.Lb1.Location = New System.Drawing.Point(334, 83)
         Me.Lb1.Name = "Lb1"
         Me.Lb1.Size = New System.Drawing.Size(161, 147)
         Me.Lb1.TabIndex = 8
@@ -124,14 +126,14 @@ Partial Class FrmAltaPlato
         'Lb2
         '
         Me.Lb2.FormattingEnabled = True
-        Me.Lb2.Location = New System.Drawing.Point(570, 55)
+        Me.Lb2.Location = New System.Drawing.Point(570, 83)
         Me.Lb2.Name = "Lb2"
         Me.Lb2.Size = New System.Drawing.Size(161, 147)
         Me.Lb2.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(501, 58)
+        Me.Button1.Location = New System.Drawing.Point(501, 86)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(63, 23)
         Me.Button1.TabIndex = 10
@@ -140,7 +142,7 @@ Partial Class FrmAltaPlato
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(501, 98)
+        Me.Button2.Location = New System.Drawing.Point(501, 126)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(63, 23)
         Me.Button2.TabIndex = 11
@@ -149,7 +151,7 @@ Partial Class FrmAltaPlato
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(501, 138)
+        Me.Button3.Location = New System.Drawing.Point(501, 166)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(63, 23)
         Me.Button3.TabIndex = 12
@@ -158,7 +160,7 @@ Partial Class FrmAltaPlato
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(501, 178)
+        Me.Button4.Location = New System.Drawing.Point(501, 206)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(63, 23)
         Me.Button4.TabIndex = 13
@@ -167,7 +169,7 @@ Partial Class FrmAltaPlato
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(129, 226)
+        Me.BtnCancelar.Location = New System.Drawing.Point(129, 236)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(186, 23)
         Me.BtnCancelar.TabIndex = 14
@@ -176,18 +178,36 @@ Partial Class FrmAltaPlato
         '
         'BtnAnadir
         '
-        Me.BtnAnadir.Location = New System.Drawing.Point(334, 226)
+        Me.BtnAnadir.Location = New System.Drawing.Point(334, 236)
         Me.BtnAnadir.Name = "BtnAnadir"
         Me.BtnAnadir.Size = New System.Drawing.Size(186, 23)
         Me.BtnAnadir.TabIndex = 15
         Me.BtnAnadir.Text = "Añadir"
         Me.BtnAnadir.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(12, 35)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(43, 13)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Precio: "
+        '
+        'TxtPrecio
+        '
+        Me.TxtPrecio.Location = New System.Drawing.Point(129, 32)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.Size = New System.Drawing.Size(186, 20)
+        Me.TxtPrecio.TabIndex = 17
+        '
         'FrmAltaPlato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(742, 261)
+        Me.ClientSize = New System.Drawing.Size(742, 268)
+        Me.Controls.Add(Me.TxtPrecio)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnAnadir)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.Button4)
@@ -227,4 +247,6 @@ Partial Class FrmAltaPlato
     Friend WithEvents Button4 As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnAnadir As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtPrecio As TextBox
 End Class

@@ -39,6 +39,12 @@ Public NotInheritable Class DBManager
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
         ODataAdapter.Fill(ODataSet, "platos_ingredientes")
+        'ODataAdapter = New MySqlDataAdapter("SELECT * FROM pedidos", OConexion)
+        'OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        'ODataAdapter.Fill(ODataSet, "pedidos")
+        'ODataAdapter = New MySqlDataAdapter("SELECT * FROM lineas_pedido", OConexion)
+        'OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        'ODataAdapter.Fill(ODataSet, "lineas_pedidos")
         OConexion.Close()
     End Sub
 
@@ -50,6 +56,7 @@ Public NotInheritable Class DBManager
             NuevoPlato.Nombre = ODataSet.Tables("platos").Rows(contador).Item("nombre")
             NuevoPlato.Descripcion = ODataSet.Tables("platos").Rows(contador).Item("descripcion")
             NuevoPlato.EsBebida = ODataSet.Tables("platos").Rows(contador).Item("esbebida")
+            NuevoPlato.Precio = ODataSet.Tables("platos").Rows(contador).Item("precio")
             ListaPlatos.Lista.Add(NuevoPlato)
         Next
         Return ListaPlatos
@@ -222,6 +229,7 @@ Public NotInheritable Class DBManager
         ODataRow("nombre") = Plato.Nombre
         ODataRow("descripcion") = Plato.Descripcion
         ODataRow("esbebida") = Plato.EsBebida
+        ODataRow("precio") = Plato.Precio
         ODataSet.Tables("platos").Rows.Add(ODataRow)
 
         ODataAdapter.Update(ODataSet, "platos")
@@ -313,6 +321,17 @@ Public NotInheritable Class DBManager
         ODataSet.Tables("usuarios").AcceptChanges()
     End Sub
 
+    Public Sub ModificarPlato(ByVal Pos As Integer, ByVal Plato As Plato)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataSet.Tables("platos").Rows(Pos).Item("nombre") = Plato.Nombre
+        ODataSet.Tables("platos").Rows(Pos).Item("descripcion") = Plato.Descripcion
+        ODataSet.Tables("platos").Rows(Pos).Item("esbebida") = Plato.EsBebida
+        ODataSet.Tables("platos").Rows(Pos).Item("precio") = Plato.Precio
+        ODataAdapter.Update(ODataSet, "platos")
+        ODataSet.Tables("platos").AcceptChanges()
+    End Sub
+
     Public Sub DeletePermiso(ByVal Pos As Integer)
         ' Controlar si eso
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM permisos", OConexion)
@@ -320,6 +339,15 @@ Public NotInheritable Class DBManager
         ODataSet.Tables("permisos").Rows(Pos).Delete()
         ODataAdapter.Update(ODataSet, "permisos")
         ODataSet.Tables("permisos").AcceptChanges()
+    End Sub
+
+    Public Sub DeletePlatoIngrediente(ByVal Pos As Integer)
+        ' Controlar si eso
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataSet.Tables("platos_ingredientes").Rows(Pos).Delete()
+        ODataAdapter.Update(ODataSet, "platos_ingredientes")
+        ODataSet.Tables("platos_ingredientes").AcceptChanges()
     End Sub
 
     'Para la excepcion, deletepermisobyid

@@ -15,6 +15,15 @@
         Return -1
     End Function
 
+    Public Function GetNombre(ByVal Id As String) As String
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Id = Id) Then
+                Return Lista(i).Nombre
+            End If
+        Next
+        Return -1
+    End Function
+
     Public Function GetNewId() As Integer
         Dim Nuevo As Integer = -1
         For i = 0 To Lista.Count - 1
