@@ -119,3 +119,4 @@ C:\Users\Deluisp\Source\Repos\Easiest2\Easiest\Easiest\Easiest\obj\Debug\Easiest
 C:\Users\Deluisp\Source\Repos\Easiest2\Easiest\Easiest\Easiest\obj\Debug\Easiest.xml
 C:\Users\Deluisp\Source\Repos\Easiest2\Easiest\Easiest\Easiest\obj\Debug\Easiest.pdb
 C:\Users\Deluisp\Source\Repos\Easiest2\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmAltaIngrediente.resources
+C:\Users\Deluisp\Source\Repos\Easiest2\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmAltaPlato.resources

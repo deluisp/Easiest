@@ -199,6 +199,11 @@ Public Class VentanaPrincipal
         Dim FrmAltaIngrediente As New FrmAltaIngrediente
         FrmAltaIngrediente.MdiParent = Me
         FrmAltaIngrediente.Show()
-        FrmAltaIngrediente.Show()
+    End Sub
+
+    Private Sub BtnPlatosAnadir_Click(sender As Object, e As EventArgs) Handles BtnPlatosAnadir.Click
+        Dim FrmAltaPlato As New FrmAltaPlato
+        FrmAltaPlato.MdiParent = Me
+        FrmAltaPlato.Show()
     End Sub
 End Class

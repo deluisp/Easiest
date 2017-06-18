@@ -52,6 +52,10 @@ Partial Class VentanaPrincipal
         Me.BtnIngredientesAnadir = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnIngredientesModificar = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnIngredientesEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosAnadir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosModificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnPlatosEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -95,10 +99,6 @@ Partial Class VentanaPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PlatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnPlatosAnadir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnPlatosModificar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnPlatosEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -110,7 +110,7 @@ Partial Class VentanaPrincipal
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(784, 24)
+        Me.MenuStrip.Size = New System.Drawing.Size(869, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -266,26 +266,51 @@ Partial Class VentanaPrincipal
         '
         Me.IngredientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnIngredientesAnadir, Me.BtnIngredientesModificar, Me.BtnIngredientesEliminar})
         Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
-        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.IngredientesToolStripMenuItem.Text = "Ingredientes"
         '
         'BtnIngredientesAnadir
         '
         Me.BtnIngredientesAnadir.Name = "BtnIngredientesAnadir"
-        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(125, 22)
         Me.BtnIngredientesAnadir.Text = "Añadir"
         '
         'BtnIngredientesModificar
         '
         Me.BtnIngredientesModificar.Name = "BtnIngredientesModificar"
-        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(125, 22)
         Me.BtnIngredientesModificar.Text = "Modificar"
         '
         'BtnIngredientesEliminar
         '
         Me.BtnIngredientesEliminar.Name = "BtnIngredientesEliminar"
-        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(125, 22)
         Me.BtnIngredientesEliminar.Text = "Eliminar"
+        '
+        'PlatosToolStripMenuItem
+        '
+        Me.PlatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnPlatosAnadir, Me.BtnPlatosModificar, Me.BtnPlatosEliminar})
+        Me.PlatosToolStripMenuItem.Name = "PlatosToolStripMenuItem"
+        Me.PlatosToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PlatosToolStripMenuItem.Text = "Platos"
+        '
+        'BtnPlatosAnadir
+        '
+        Me.BtnPlatosAnadir.Name = "BtnPlatosAnadir"
+        Me.BtnPlatosAnadir.Size = New System.Drawing.Size(125, 22)
+        Me.BtnPlatosAnadir.Text = "Añadir"
+        '
+        'BtnPlatosModificar
+        '
+        Me.BtnPlatosModificar.Name = "BtnPlatosModificar"
+        Me.BtnPlatosModificar.Size = New System.Drawing.Size(125, 22)
+        Me.BtnPlatosModificar.Text = "Modificar"
+        '
+        'BtnPlatosEliminar
+        '
+        Me.BtnPlatosEliminar.Name = "BtnPlatosEliminar"
+        Me.BtnPlatosEliminar.Size = New System.Drawing.Size(125, 22)
+        Me.BtnPlatosEliminar.Text = "Eliminar"
         '
         'EditMenu
         '
@@ -508,7 +533,7 @@ Partial Class VentanaPrincipal
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(784, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(869, 25)
         Me.ToolStrip.TabIndex = 6
         Me.ToolStrip.Text = "ToolStrip"
         '
@@ -581,7 +606,7 @@ Partial Class VentanaPrincipal
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 540)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(784, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(869, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -591,36 +616,11 @@ Partial Class VentanaPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'PlatosToolStripMenuItem
-        '
-        Me.PlatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnPlatosAnadir, Me.BtnPlatosModificar, Me.BtnPlatosEliminar})
-        Me.PlatosToolStripMenuItem.Name = "PlatosToolStripMenuItem"
-        Me.PlatosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PlatosToolStripMenuItem.Text = "Platos"
-        '
-        'BtnPlatosAnadir
-        '
-        Me.BtnPlatosAnadir.Name = "BtnPlatosAnadir"
-        Me.BtnPlatosAnadir.Size = New System.Drawing.Size(152, 22)
-        Me.BtnPlatosAnadir.Text = "Añadir"
-        '
-        'BtnPlatosModificar
-        '
-        Me.BtnPlatosModificar.Name = "BtnPlatosModificar"
-        Me.BtnPlatosModificar.Size = New System.Drawing.Size(152, 22)
-        Me.BtnPlatosModificar.Text = "Modificar"
-        '
-        'BtnPlatosEliminar
-        '
-        Me.BtnPlatosEliminar.Name = "BtnPlatosEliminar"
-        Me.BtnPlatosEliminar.Size = New System.Drawing.Size(152, 22)
-        Me.BtnPlatosEliminar.Text = "Eliminar"
-        '
         'VentanaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.ClientSize = New System.Drawing.Size(869, 562)
         Me.Controls.Add(Me.ToolStrip)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)

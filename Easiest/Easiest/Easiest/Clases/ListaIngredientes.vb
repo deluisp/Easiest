@@ -37,4 +37,13 @@
         Main.DBManager.AddNewIngrediente(NuevoIngrediente)
     End Function
 
+    Public Function Buscar(ByVal Nombre As String) As Integer
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Nombre = Nombre) Then
+                Return Lista(i).Id
+            End If
+        Next
+        Return False
+    End Function
+
 End Class

@@ -10,6 +10,8 @@ Module Main
     Public ListaIngredientesCategorias As New ListaIngredientesCategorias
     Public ListaIngredientesTipos As New ListaIngredientesTipos
     Public ListaIngredientes As New ListaIngredientes
+    Public ListaPlatos As New ListaPlatos
+    Public ListaPlatosIngredientes As New ListaPlatosIngredientes
 
     Public UsuarioActual As Integer 'ID
     Public LogActual As Integer
@@ -27,6 +29,8 @@ Module Main
         ListaIngredientesCategorias = DBManager.CargarIngredientesCategorias
         ListaIngredientesTipos = DBManager.CargarIngredientesTipos
         ListaIngredientes = DBManager.CargarIngredientes
+        ListaPlatos = DBManager.CargarPlatos
+        ListaPlatosIngredientes = DBManager.CargarPlatosIngredientes
 
         FrmLogin = New FrmLogin()
         FrmPrincipal = New VentanaPrincipal()

@@ -33,8 +33,38 @@ Public NotInheritable Class DBManager
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
         ODataAdapter.Fill(ODataSet, "ingredientes")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "platos")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "platos_ingredientes")
         OConexion.Close()
     End Sub
+
+    Public Function CargarPlatos() As ListaPlatos
+        Dim ListaPlatos As New ListaPlatos
+        For contador = 0 To ODataSet.Tables("platos").Rows.Count - 1
+            Dim NuevoPlato As New Plato
+            NuevoPlato.Id = ODataSet.Tables("platos").Rows(contador).Item("id")
+            NuevoPlato.Nombre = ODataSet.Tables("platos").Rows(contador).Item("nombre")
+            NuevoPlato.Descripcion = ODataSet.Tables("platos").Rows(contador).Item("descripcion")
+            NuevoPlato.EsBebida = ODataSet.Tables("platos").Rows(contador).Item("esbebida")
+            ListaPlatos.Lista.Add(NuevoPlato)
+        Next
+        Return ListaPlatos
+    End Function
+
+    Public Function CargarPlatosIngredientes() As ListaPlatosIngredientes
+        Dim ListaPlatosIngredientes As New ListaPlatosIngredientes
+        For contador = 0 To ODataSet.Tables("platos_ingredientes").Rows.Count - 1
+            Dim NuevoPlatoIngrediente As New PlatoIngrediente
+            NuevoPlatoIngrediente.IdPlato = ODataSet.Tables("platos_ingredientes").Rows(contador).Item("id_plato")
+            NuevoPlatoIngrediente.IdIngrediente = ODataSet.Tables("platos_ingredientes").Rows(contador).Item("id_ingrediente")
+            ListaPlatosIngredientes.Lista.Add(NuevoPlatoIngrediente)
+        Next
+        Return ListaPlatosIngredientes
+    End Function
 
     Public Function CargarUsuarios() As ListaUsuarios
         Dim ListaUsuarios As New ListaUsuarios
@@ -180,6 +210,36 @@ Public NotInheritable Class DBManager
 
         ODataAdapter.Update(ODataSet, "ingredientes")
         ODataSet.Tables("ingredientes").AcceptChanges()
+    End Sub
+
+    Public Sub AddNewPlato(ByVal Plato As Plato)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+
+        Dim ODataRow As DataRow
+        ODataRow = ODataSet.Tables("platos").NewRow
+        ODataRow("id") = Plato.Id
+        ODataRow("nombre") = Plato.Nombre
+        ODataRow("descripcion") = Plato.Descripcion
+        ODataRow("esbebida") = Plato.EsBebida
+        ODataSet.Tables("platos").Rows.Add(ODataRow)
+
+        ODataAdapter.Update(ODataSet, "platos")
+        ODataSet.Tables("platos").AcceptChanges()
+    End Sub
+
+    Public Sub AddNewPlatoIngrediente(ByVal PlatoIngrediente As PlatoIngrediente)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+
+        Dim ODataRow As DataRow
+        ODataRow = ODataSet.Tables("platos_ingredientes").NewRow
+        ODataRow("id_plato") = PlatoIngrediente.IdPlato
+        ODataRow("id_ingrediente") = PlatoIngrediente.IdIngrediente
+        ODataSet.Tables("platos_ingredientes").Rows.Add(ODataRow)
+
+        ODataAdapter.Update(ODataSet, "platos_ingredientes")
+        ODataSet.Tables("platos_ingredientes").AcceptChanges()
     End Sub
 
     Public Sub AddNewPermiso(ByVal Permiso As Permiso)
