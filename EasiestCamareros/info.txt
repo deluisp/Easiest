@@ -1,0 +1,16 @@
+Aplicacion principal:
+
+-Diseño de la app
+-Alta ingrediente: El boton cancelar que cierre y el boton aceptar que nos muestre un mensaje de ingrediente añadido
+-Modificar y eliminar ingredientes: Hacer funciones y funcionalidad
+-Alta de platos: corregir errores y funcionalidades.
+-Modificar platos: no tocar
+-Eliminar platos: diseño y funcionalidad. Boton eliminar dejar a un lado.
+
+Aplicacion tpv:
+-Facturas
+-Control de clausura de formularios.
+-Ventana de pedidos funcionalidades
+-Añadir boton para ver el pedido de cada mesa.
+-Al iniciar sesion se asigna el camarero automaticamente
+-No se redimensionan los formularios
