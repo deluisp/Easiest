@@ -184,15 +184,21 @@ Public Class VentanaPrincipal
     End Sub
 
     Private Sub AltasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltasToolStripMenuItem.Click
-        FrmAltaEmpleado.Show()
+        Dim FrmAlta As New FrmAltaEmpleado
+        FrmAlta.MdiParent = Me
+        FrmAlta.Show()
     End Sub
 
     Private Sub ModificaciónDeEmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificaciónDeEmpleadoToolStripMenuItem.Click
-        FrmModificarEmpleado.Show()
+        Dim FrmModificar As New FrmModificarEmpleado
+        FrmModificar.MdiParent = Me
+        FrmModificar.Show()
     End Sub
 
     Private Sub BajaDeEmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaDeEmpleadoToolStripMenuItem.Click
-        FrmBajaEmpleados.Show()
+        Dim FrmBaja As New FrmBajaEmpleados
+        FrmBaja.MdiParent = Me
+        FrmBaja.Show()
     End Sub
 
     Private Sub BtnIngredientesAnadir_Click(sender As Object, e As EventArgs) Handles BtnIngredientesAnadir.Click

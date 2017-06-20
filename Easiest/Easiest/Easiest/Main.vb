@@ -18,6 +18,8 @@ Module Main
 
     Public FrmPrincipal As VentanaPrincipal
     Public FrmLogin As FrmLogin
+    Public VentanaMail As FrmEmail
+
 
     Public Sub Main()
         DBManager = New DBManager()

@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.ComponentModel
+Imports System.Text.RegularExpressions
 Public Class FrmModificarUsuarios
     Private Sub TxtClave_TextChanged(sender As Object, e As EventArgs) Handles TxtClave.TextChanged
         LblError.Visible = False
@@ -67,7 +68,7 @@ Public Class FrmModificarUsuarios
             If (Main.ListaPermisos.BuscarPermiso(Main.ListaUsuarios.GetId(TxtUsuario.Text), 5)) Then BtnConsultaA01.Checked = True
 
         Else
-                MessageBox.Show("No se muestra nada")
+            MessageBox.Show("No se muestra nada")
         End If
     End Sub
 
@@ -98,6 +99,19 @@ Public Class FrmModificarUsuarios
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Me.Close()
+        Dim resul
+        resul = MessageBox.Show("Va a cancelar la acción, ¿está de acuerdo?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbYes Then
+            Me.Close()
+        End If
+
+    End Sub
+
+    Private Sub FrmModificarUsuarios_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
     End Sub
 End Class
