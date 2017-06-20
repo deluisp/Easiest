@@ -107,5 +107,29 @@
         Next
         Return -1
     End Function
+    Public Function GetIdDni(ByVal Dni As String) As Integer
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).DNI = Dni) Then
+                Return Lista(i).Id
+            End If
+        Next
+        Return -1
+    End Function
+
+    Public Function GetNombre(ByVal Id As Integer) As String
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Id = Id) Then
+                Return Lista(i).Nombre
+            End If
+        Next
+    End Function
+
+    Public Function GetApellido(ByVal Id As Integer) As String
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Id = Id) Then
+                Return Lista(i).Apellido
+            End If
+        Next
+    End Function
 
 End Class

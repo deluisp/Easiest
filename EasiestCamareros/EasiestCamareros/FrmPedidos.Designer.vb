@@ -36,9 +36,9 @@ Partial Class FrmPedidos
         Me.lblSegundo = New System.Windows.Forms.Label()
         Me.lblPostres = New System.Windows.Forms.Label()
         Me.lblBebidas = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtSubtotal = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEntrantes = New System.Windows.Forms.Button()
         Me.btnPrimerPlato = New System.Windows.Forms.Button()
@@ -171,13 +171,13 @@ Partial Class FrmPedidos
         Me.lblBebidas.TabIndex = 16
         Me.lblBebidas.Text = "Bebidas:"
         '
-        'TextBox7
+        'txtSubtotal
         '
-        Me.TextBox7.Location = New System.Drawing.Point(653, 545)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(143, 24)
-        Me.TextBox7.TabIndex = 19
+        Me.txtSubtotal.Location = New System.Drawing.Point(653, 545)
+        Me.txtSubtotal.Multiline = True
+        Me.txtSubtotal.Name = "txtSubtotal"
+        Me.txtSubtotal.Size = New System.Drawing.Size(143, 24)
+        Me.txtSubtotal.TabIndex = 19
         '
         'Label1
         '
@@ -188,13 +188,13 @@ Partial Class FrmPedidos
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Subtotal:"
         '
-        'TextBox8
+        'txtTotal
         '
-        Me.TextBox8.Location = New System.Drawing.Point(653, 589)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(143, 24)
-        Me.TextBox8.TabIndex = 21
+        Me.txtTotal.Location = New System.Drawing.Point(653, 589)
+        Me.txtTotal.Multiline = True
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(143, 24)
+        Me.txtTotal.TabIndex = 21
         '
         'Label2
         '
@@ -334,9 +334,9 @@ Partial Class FrmPedidos
         Me.Controls.Add(Me.btnSegundoPlato)
         Me.Controls.Add(Me.btnPrimerPlato)
         Me.Controls.Add(Me.btnEntrantes)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txtSubtotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblBebidas)
         Me.Controls.Add(Me.lblPostres)
@@ -374,9 +374,9 @@ Partial Class FrmPedidos
     Friend WithEvents lblSegundo As Label
     Friend WithEvents lblPostres As Label
     Friend WithEvents lblBebidas As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtSubtotal As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtTotal As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnEntrantes As Button
     Friend WithEvents btnPrimerPlato As Button

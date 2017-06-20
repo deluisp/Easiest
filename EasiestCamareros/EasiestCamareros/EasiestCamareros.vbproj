@@ -80,6 +80,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\DBManager.vb" />
+    <Compile Include="Clases\Ingrediente.vb" />
+    <Compile Include="Clases\IngredienteCategoria.vb" />
+    <Compile Include="Clases\IngredienteTipo.vb" />
+    <Compile Include="Clases\ListaIngredientes.vb" />
+    <Compile Include="Clases\ListaIngredientesCategorias.vb" />
+    <Compile Include="Clases\ListaIngredientesTipos.vb" />
+    <Compile Include="Clases\ListaPlatos.vb" />
+    <Compile Include="Clases\ListaPlatosIngredientes.vb" />
+    <Compile Include="Clases\Plato.vb" />
+    <Compile Include="Clases\PlatoIngrediente.vb" />
     <Compile Include="EasiestCamareros.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -14,6 +14,16 @@ Public Class FrmPedidos
             btnAsignar.Enabled = False
         End If
 
+        TxtCamarero.Text = Main.ListaEmpleados.GetNombre(Main.EmpleadoActual) & " " & Main.ListaEmpleados.GetApellido(Main.EmpleadoActual)
+
+        For i = 0 To Main.ListaPlatos.Lista.Count - 1
+            If Main.ListaPlatos.Lista(i).Tipo = 1 Then lbEntrantes.Items.Add(Main.ListaPlatos.Lista(i).Nombre)
+            If Main.ListaPlatos.Lista(i).Tipo = 2 Then lbPrimerPlato.Items.Add(Main.ListaPlatos.Lista(i).Nombre)
+            If Main.ListaPlatos.Lista(i).Tipo = 3 Then LbSegundoPlato.Items.Add(Main.ListaPlatos.Lista(i).Nombre)
+            If Main.ListaPlatos.Lista(i).Tipo = 4 Then lbPostre.Items.Add(Main.ListaPlatos.Lista(i).Nombre)
+            If Main.ListaPlatos.Lista(i).Tipo = 5 Then lbBebida.Items.Add(Main.ListaPlatos.Lista(i).Nombre)
+        Next
+
     End Sub
 
     Private Sub btnAsignar_Click(sender As Object, e As EventArgs) Handles btnAsignar.Click
@@ -89,6 +99,69 @@ Public Class FrmPedidos
             VentanaMesas.btnAsignar09.Enabled = True
             VentanaMesas.btnLiberar09.Enabled = False
         End If
+    End Sub
+
+    Private Sub btnEntrantes_Click(sender As Object, e As EventArgs) Handles btnEntrantes.Click, lbEntrantes.DoubleClick
+        Try
+            lbTicket.Items.Add(lbEntrantes.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnPrimerPlato_Click(sender As Object, e As EventArgs) Handles btnPrimerPlato.Click, lbPrimerPlato.DoubleClick
+        Try
+            lbTicket.Items.Add(lbPrimerPlato.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnSegundoPlato_Click(sender As Object, e As EventArgs) Handles btnSegundoPlato.Click, LbSegundoPlato.DoubleClick
+        Try
+            lbTicket.Items.Add(LbSegundoPlato.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnPostres_Click(sender As Object, e As EventArgs) Handles btnPostres.Click, lbPostre.DoubleClick
+        Try
+            lbTicket.Items.Add(lbPostre.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnBebidas_Click(sender As Object, e As EventArgs) Handles btnBebidas.Click, lbBebida.DoubleClick
+        Try
+            lbTicket.Items.Add(lbBebida.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub lbTicket_DoubleClick(sender As Object, e As EventArgs) Handles lbTicket.DoubleClick
+        Try
+            lbTicket.Items.Remove(lbTicket.SelectedItem)
+            ActualizarPrecio()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ActualizarPrecio()
+        Dim Precio As Double = 0
+        For i = 0 To lbTicket.Items.Count - 1
+            Precio = Precio + Main.ListaPlatos.GetPrecio(lbTicket.Items(i))
+        Next
+        txtSubtotal.Text = Precio.ToString
+        txtTotal.Text = Precio * 1.21
     End Sub
 
 End Class

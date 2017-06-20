@@ -22,7 +22,7 @@ Public Class LoginCamarero
                             )
             Application.ExitThread()
         Else
-            Main.EmpleadoActual = Main.ListaEmpleados.GetId(TxtClave.Text)
+            Main.EmpleadoActual = Main.ListaEmpleados.GetIdDni(TxtClave.Text)
             Me.Close()
         End If
     End Sub
