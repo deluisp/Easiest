@@ -125,6 +125,12 @@
     <Compile Include="FrmBajaEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBajaIngrediente.Designer.vb">
+      <DependentUpon>FrmBajaIngrediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBajaIngrediente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBajaUsuarios.Designer.vb">
       <DependentUpon>FrmBajaUsuarios.vb</DependentUpon>
     </Compile>
@@ -153,6 +159,12 @@
       <DependentUpon>FrmModificarEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmModificarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarIngrediente.Designer.vb">
+      <DependentUpon>FrmModificarIngrediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarIngrediente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModificarPlato.Designer.vb">
@@ -218,6 +230,9 @@
     <EmbeddedResource Include="FrmBajaEmpleados.resx">
       <DependentUpon>FrmBajaEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBajaIngrediente.resx">
+      <DependentUpon>FrmBajaIngrediente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaUsuarios.resx">
       <DependentUpon>FrmBajaUsuarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarEmpleado.resx">
       <DependentUpon>FrmModificarEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarIngrediente.resx">
+      <DependentUpon>FrmModificarIngrediente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarPlato.resx">
       <DependentUpon>FrmModificarPlato.vb</DependentUpon>

@@ -1,8 +1,10 @@
-﻿Public Class FrmBajaEmpleados
+﻿Imports System.ComponentModel
+
+Public Class FrmBajaEmpleados
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
         Main.ListaEmpleados.BorrarEmpleado(TxtDni.Text)
 
-        MessageBox.Show("El empleado ha sido eliminado")
+        MessageBox.Show("El empleado ha sido eliminado con exito")
 
         TxtDni.Text = ""
         TxtNombre.Text = ""
@@ -38,6 +40,18 @@
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Me.Close()
+        Dim resul
+        resul = MessageBox.Show("Va a cancelar la acción, ¿está de acuerdo?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbYes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub FrmBajaEmpleados_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
     End Sub
 End Class

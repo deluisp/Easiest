@@ -19,6 +19,7 @@ Public Class FrmBajaUsuarios
 
     Private Sub BtnDarDeBaja_Click(sender As Object, e As EventArgs) Handles BtnDarDeBaja.Click
         Main.ListaUsuarios.Borrar(TxtUsuario.Text)
+        MessageBox.Show("Ha borrado el usuario con exito")
     End Sub
 
     Private Sub FrmBajaUsuarios_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing

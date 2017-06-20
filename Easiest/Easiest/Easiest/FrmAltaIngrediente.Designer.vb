@@ -22,6 +22,7 @@ Partial Class FrmAltaIngrediente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAltaIngrediente))
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -38,65 +39,73 @@ Partial Class FrmAltaIngrediente
         '
         'TxtNombre
         '
+        Me.TxtNombre.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(225, 29)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(214, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(214, 22)
         Me.TxtNombre.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(32, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(61, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nombre: "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(32, 86)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
+        Me.Label2.Size = New System.Drawing.Size(40, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Tipo: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(32, 59)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 13)
+        Me.Label3.Size = New System.Drawing.Size(69, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Categoría: "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(32, 112)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 13)
+        Me.Label4.Size = New System.Drawing.Size(80, 15)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Descripción: "
         '
         'CmbTipo
         '
+        Me.CmbTipo.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbTipo.FormattingEnabled = True
         Me.CmbTipo.Location = New System.Drawing.Point(225, 82)
         Me.CmbTipo.Name = "CmbTipo"
-        Me.CmbTipo.Size = New System.Drawing.Size(164, 21)
+        Me.CmbTipo.Size = New System.Drawing.Size(164, 23)
         Me.CmbTipo.TabIndex = 5
         '
         'CmbCategoria
         '
+        Me.CmbCategoria.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbCategoria.FormattingEnabled = True
         Me.CmbCategoria.Location = New System.Drawing.Point(225, 55)
         Me.CmbCategoria.Name = "CmbCategoria"
-        Me.CmbCategoria.Size = New System.Drawing.Size(164, 21)
+        Me.CmbCategoria.Size = New System.Drawing.Size(164, 23)
         Me.CmbCategoria.TabIndex = 6
         '
         'TxtDescripcion
         '
+        Me.TxtDescripcion.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDescripcion.Location = New System.Drawing.Point(127, 109)
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(312, 131)
@@ -105,7 +114,8 @@ Partial Class FrmAltaIngrediente
         '
         'BtnAnadir
         '
-        Me.BtnAnadir.Location = New System.Drawing.Point(261, 255)
+        Me.BtnAnadir.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAnadir.Location = New System.Drawing.Point(25, 262)
         Me.BtnAnadir.Name = "BtnAnadir"
         Me.BtnAnadir.Size = New System.Drawing.Size(178, 23)
         Me.BtnAnadir.TabIndex = 8
@@ -114,7 +124,8 @@ Partial Class FrmAltaIngrediente
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(35, 255)
+        Me.BtnCancelar.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.Location = New System.Drawing.Point(274, 262)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(189, 23)
         Me.BtnCancelar.TabIndex = 9
@@ -143,6 +154,7 @@ Partial Class FrmAltaIngrediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(482, 297)
         Me.Controls.Add(Me.BtnAnadirCategoria)
         Me.Controls.Add(Me.BtnAnadirTipo)
@@ -156,7 +168,11 @@ Partial Class FrmAltaIngrediente
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TxtNombre)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmAltaIngrediente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alta de Ingrediente"
         Me.ResumeLayout(False)
         Me.PerformLayout()

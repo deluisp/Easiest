@@ -12,7 +12,7 @@ Public Class FrmAltaEmpleado
 
 
 
-                MessageBox.Show("Usuario añadido con exito")
+                MessageBox.Show("Empleado añadido con exito")
                 Me.Close()
             End If
         End If
