@@ -1,4 +1,5 @@
-﻿Imports System.Net
+﻿Imports System.ComponentModel
+Imports System.Net
 Imports System.Net.Mail
 Public Class FrmEmail
 
@@ -13,7 +14,19 @@ Public Class FrmEmail
 
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+
         TxtEmail.Text = Main.ListaUsuarios.GetUsuario(TxtUsuario.Text)
+
+        'If Not Main.ListaUsuarios.GetUsuario(TxtUsuario.Text) = -1 Then
+        '    BtnEnviar.Enabled = True
+        'End If
+
+        'If TxtEmail.Text = -1 Then
+        '    TxtEmail.Text = "No existe email"
+        '    BtnEnviar.Enabled = False
+        'End If
+
+
     End Sub
 
     Private Sub BtnEnviar_Click(sender As Object, e As EventArgs) Handles BtnEnviar.Click
@@ -36,11 +49,13 @@ Public Class FrmEmail
         Mensaje.Priority = MailPriority.High
         Mensaje.IsBodyHtml = False
 
+
         'Envio'
         Try
             Servidor.Send(Mensaje)
             MessageBox.Show("Su clave ha sido enviada", "Enviado", MessageBoxButtons.OK)
             Me.Close()
+            Application.Restart()
         Catch ex As Exception
             MessageBox.Show("Error. No se ha podido enviar la clave a la direccion de correo", "Error", MessageBoxButtons.OK)
         End Try
@@ -49,5 +64,15 @@ Public Class FrmEmail
 
 
 
+    End Sub
+
+    Private Sub FrmEmail_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Application.Restart()
+    End Sub
+
+    Private Sub FrmEmail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'If TxtUsuario.Text = "" Then
+        '    BtnEnviar.Enabled = False
+        'End If
     End Sub
 End Class

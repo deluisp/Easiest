@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.ComponentModel
 
 Public Class FrmAltaUsuarios
     Private Sub TxtClave_TextChanged(sender As Object, e As EventArgs) Handles TxtClave.TextChanged
@@ -60,7 +61,14 @@ Public Class FrmAltaUsuarios
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Me.Close()
+        Dim resul
+        resul = MessageBox.Show("Va a cancelar la acción, ¿está de acuerdo?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbYes Then
+            Me.Close()
+        End If
+
+
+
     End Sub
 
     Private Sub OptBasico_CheckedChanged(sender As Object, e As EventArgs) Handles OptBasico.CheckedChanged
@@ -78,5 +86,14 @@ Public Class FrmAltaUsuarios
         BtnBajas01.Checked = True
         BtnConsultaB01.Checked = True
         BtnConsultaA01.Checked = True
+    End Sub
+
+    Private Sub FrmAltaUsuarios_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
+
     End Sub
 End Class

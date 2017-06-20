@@ -25,10 +25,35 @@ Public Class FrmLogin
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Me.Close()
+        Dim resul
+        resul = MessageBox.Show("Si continua, la aplicación se cerrará, ¿está de acuerdo?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbYes Then
+            Application.ExitThread()
+        End If
+
+
     End Sub
 
     Private Sub BtnEmail_Click(sender As Object, e As EventArgs) Handles BtnEmail.Click
-        FrmEmail.Show()
+        Me.Close()
+        'VentanaPrincipal.Focus()
+        VentanaMail = New FrmEmail
+        VentanaMail.MdiParent = FrmPrincipal
+        VentanaMail.Show()
+
+
     End Sub
+
+    'Private Sub FrmLogin_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    '    Dim resul As Byte
+    '    resul = MessageBox.Show("¿Desea salir?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+    '    If resul = vbNo Then
+    '        e.Cancel = True
+    '    End If
+
+    '    If resul = vbYes Then
+    '        Application.ExitThread()
+    '    End If
+
+    'End Sub
 End Class

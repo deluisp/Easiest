@@ -1,4 +1,6 @@
-﻿Public Class FrmModificarEmpleado
+﻿Imports System.ComponentModel
+
+Public Class FrmModificarEmpleado
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         If Main.ListaEmpleados.BuscarDNI(TxtDni.Text) Then
 
@@ -24,12 +26,24 @@
             Main.ListaEmpleados.ModificarEmpleado(TxtNombre.Text, TxtApellido.Text, TxtNacimiento.Text, TxtEmail.Text, TxtDireccion.Text, TxtCiudad.Text, TxtPais.Text, TxtTelefono.Text, TxtTrabajo.Text, TxtSalario.Text, TxtRestaurante.Text, TxtDni.Text)
             Main.DBManager.UpdateEmployer()
 
-            MessageBox.Show("Empleado modificado con exito")
+            MessageBox.Show("Empleado modificado con exito, se cerrará el formulario.")
             Me.Close()
         End If
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        Me.Close()
+        Dim resul
+        resul = MessageBox.Show("Va a cancelar la acción, ¿está de acuerdo?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbYes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub FrmModificarEmpleado_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
     End Sub
 End Class
