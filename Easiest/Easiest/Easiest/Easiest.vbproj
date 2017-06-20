@@ -131,6 +131,12 @@
     <Compile Include="FrmBajaIngrediente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBajaPlato.Designer.vb">
+      <DependentUpon>FrmBajaPlato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBajaPlato.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBajaUsuarios.Designer.vb">
       <DependentUpon>FrmBajaUsuarios.vb</DependentUpon>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaIngrediente.resx">
       <DependentUpon>FrmBajaIngrediente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBajaPlato.resx">
+      <DependentUpon>FrmBajaPlato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaUsuarios.resx">
       <DependentUpon>FrmBajaUsuarios.vb</DependentUpon>

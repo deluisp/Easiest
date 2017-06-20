@@ -22,6 +22,7 @@ Partial Class FrmAltaPlato
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAltaPlato))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,45 +41,52 @@ Partial Class FrmAltaPlato
         Me.BtnAnadir = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtPrecio = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(61, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre: "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 62)
+        Me.Label2.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 73)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
+        Me.Label2.Size = New System.Drawing.Size(40, 15)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Tipo: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 86)
+        Me.Label3.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(15, 97)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.Size = New System.Drawing.Size(80, 15)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Descripción: "
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(129, 6)
+        Me.TxtNombre.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(132, 17)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(186, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(186, 22)
         Me.TxtNombre.TabIndex = 3
         '
         'TxtDescripcion
         '
-        Me.TxtDescripcion.Location = New System.Drawing.Point(129, 83)
+        Me.TxtDescripcion.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDescripcion.Location = New System.Drawing.Point(132, 94)
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(186, 147)
         Me.TxtDescripcion.TabIndex = 4
@@ -87,9 +95,10 @@ Partial Class FrmAltaPlato
         'RdbComida
         '
         Me.RdbComida.AutoSize = True
-        Me.RdbComida.Location = New System.Drawing.Point(129, 60)
+        Me.RdbComida.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbComida.Location = New System.Drawing.Point(132, 71)
         Me.RdbComida.Name = "RdbComida"
-        Me.RdbComida.Size = New System.Drawing.Size(60, 17)
+        Me.RdbComida.Size = New System.Drawing.Size(68, 19)
         Me.RdbComida.TabIndex = 5
         Me.RdbComida.TabStop = True
         Me.RdbComida.Text = "Comida"
@@ -98,9 +107,10 @@ Partial Class FrmAltaPlato
         'RdbBebida
         '
         Me.RdbBebida.AutoSize = True
-        Me.RdbBebida.Location = New System.Drawing.Point(225, 60)
+        Me.RdbBebida.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbBebida.Location = New System.Drawing.Point(228, 71)
         Me.RdbBebida.Name = "RdbBebida"
-        Me.RdbBebida.Size = New System.Drawing.Size(58, 17)
+        Me.RdbBebida.Size = New System.Drawing.Size(62, 19)
         Me.RdbBebida.TabIndex = 6
         Me.RdbBebida.TabStop = True
         Me.RdbBebida.Text = "Bebida"
@@ -109,31 +119,37 @@ Partial Class FrmAltaPlato
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(331, 62)
+        Me.Label4.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(334, 73)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 13)
+        Me.Label4.Size = New System.Drawing.Size(84, 15)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Ingredientes: "
         '
         'Lb1
         '
+        Me.Lb1.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb1.FormattingEnabled = True
-        Me.Lb1.Location = New System.Drawing.Point(334, 83)
+        Me.Lb1.ItemHeight = 15
+        Me.Lb1.Location = New System.Drawing.Point(337, 94)
         Me.Lb1.Name = "Lb1"
-        Me.Lb1.Size = New System.Drawing.Size(161, 147)
+        Me.Lb1.Size = New System.Drawing.Size(161, 139)
         Me.Lb1.TabIndex = 8
         '
         'Lb2
         '
+        Me.Lb2.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lb2.FormattingEnabled = True
-        Me.Lb2.Location = New System.Drawing.Point(570, 83)
+        Me.Lb2.ItemHeight = 15
+        Me.Lb2.Location = New System.Drawing.Point(573, 94)
         Me.Lb2.Name = "Lb2"
-        Me.Lb2.Size = New System.Drawing.Size(161, 147)
+        Me.Lb2.Size = New System.Drawing.Size(161, 139)
         Me.Lb2.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(501, 86)
+        Me.Button1.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(504, 97)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(63, 23)
         Me.Button1.TabIndex = 10
@@ -142,7 +158,8 @@ Partial Class FrmAltaPlato
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(501, 126)
+        Me.Button2.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(504, 137)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(63, 23)
         Me.Button2.TabIndex = 11
@@ -151,7 +168,8 @@ Partial Class FrmAltaPlato
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(501, 166)
+        Me.Button3.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(504, 177)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(63, 23)
         Me.Button3.TabIndex = 12
@@ -160,7 +178,8 @@ Partial Class FrmAltaPlato
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(501, 206)
+        Me.Button4.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(504, 217)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(63, 23)
         Me.Button4.TabIndex = 13
@@ -169,7 +188,8 @@ Partial Class FrmAltaPlato
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(129, 236)
+        Me.BtnCancelar.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.Location = New System.Drawing.Point(337, 247)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(186, 23)
         Me.BtnCancelar.TabIndex = 14
@@ -178,7 +198,8 @@ Partial Class FrmAltaPlato
         '
         'BtnAnadir
         '
-        Me.BtnAnadir.Location = New System.Drawing.Point(334, 236)
+        Me.BtnAnadir.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAnadir.Location = New System.Drawing.Point(132, 247)
         Me.BtnAnadir.Name = "BtnAnadir"
         Me.BtnAnadir.Size = New System.Drawing.Size(186, 23)
         Me.BtnAnadir.TabIndex = 15
@@ -188,24 +209,37 @@ Partial Class FrmAltaPlato
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 35)
+        Me.Label5.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(15, 46)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(43, 13)
+        Me.Label5.Size = New System.Drawing.Size(50, 15)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Precio: "
         '
         'TxtPrecio
         '
-        Me.TxtPrecio.Location = New System.Drawing.Point(129, 32)
+        Me.TxtPrecio.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPrecio.Location = New System.Drawing.Point(132, 43)
         Me.TxtPrecio.Name = "TxtPrecio"
-        Me.TxtPrecio.Size = New System.Drawing.Size(186, 20)
+        Me.TxtPrecio.Size = New System.Drawing.Size(186, 22)
         Me.TxtPrecio.TabIndex = 17
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(716, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(66, 69)
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
         '
         'FrmAltaPlato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(742, 268)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(803, 286)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TxtPrecio)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnAnadir)
@@ -224,8 +258,13 @@ Partial Class FrmAltaPlato
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmAltaPlato"
-        Me.Text = "FrmAnadirPlato"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Añadir un plato"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,4 +288,5 @@ Partial Class FrmAltaPlato
     Friend WithEvents BtnAnadir As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtPrecio As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
