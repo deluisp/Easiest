@@ -1,4 +1,5 @@
 ﻿'Imports ProyectoPruebaUsuarios.DBManager
+Imports System.ComponentModel
 Imports MySql.Data.MySqlClient
 Public Class UsuariosConsultaCompl
 
@@ -18,11 +19,11 @@ Public Class UsuariosConsultaCompl
 
 
 
-        ODataAdapter = New MySqlDataAdapter(cadenaSelect, Main.DBManager.OConexion)
-        ODataAdapter.Fill(ODataSet, cadenaTabla)
-        ODataAdapter = Nothing
+        oDataAdapter = New MySqlDataAdapter(cadenaSelect, Main.DBManager.OConexion)
+        oDataAdapter.Fill(oDataSet, cadenaTabla)
+        oDataAdapter = Nothing
 
-        GtdConsulta.DataSource = ODataSet.Tables(cadenaTabla)
+        GtdConsulta.DataSource = oDataSet.Tables(cadenaTabla)
 
     End Sub
 
@@ -30,5 +31,13 @@ Public Class UsuariosConsultaCompl
         GtdConsulta.DataSource = ""
         txtConsulta.Text = ""
         txtTabla.Text = ""
+    End Sub
+
+    Private Sub UsuariosConsultaCompl_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
     End Sub
 End Class

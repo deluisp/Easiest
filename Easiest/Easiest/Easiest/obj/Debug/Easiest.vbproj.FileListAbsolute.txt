@@ -181,3 +181,6 @@ C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.vbpr
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.exe
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.xml
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.pdb
+C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaIngrediente.resources
+C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaPlato.resources
+C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmModificarIngrediente.resources
