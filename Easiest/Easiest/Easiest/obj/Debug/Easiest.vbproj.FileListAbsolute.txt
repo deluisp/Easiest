@@ -184,3 +184,6 @@ C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.pdb
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaIngrediente.resources
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaPlato.resources
 C:\Users\Eva\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmModificarIngrediente.resources
+C:\Users\Musalinga\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaIngrediente.resources
+C:\Users\Musalinga\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmBajaPlato.resources
+C:\Users\Musalinga\Source\Repos\Easiest\Easiest\Easiest\Easiest\obj\Debug\Easiest.FrmModificarIngrediente.resources

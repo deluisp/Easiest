@@ -24,6 +24,15 @@
         Return -1
     End Function
 
+    Public Function GetName(ByVal Nombre As String) As String
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Nombre = Nombre) Then
+                Return Lista(i).Nombre
+            End If
+        Next
+        Return Nothing
+    End Function
+
     Public Function GetNewId() As Integer
         Dim Nuevo As Integer = -1
         For i = 0 To Lista.Count - 1
@@ -54,5 +63,6 @@
         Next
         Return False
     End Function
+
 
 End Class

@@ -133,6 +133,7 @@ Partial Class FrmAltaPlato
         Me.Lb1.ItemHeight = 15
         Me.Lb1.Location = New System.Drawing.Point(337, 94)
         Me.Lb1.Name = "Lb1"
+        Me.Lb1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.Lb1.Size = New System.Drawing.Size(161, 139)
         Me.Lb1.TabIndex = 8
         '
@@ -143,6 +144,7 @@ Partial Class FrmAltaPlato
         Me.Lb2.ItemHeight = 15
         Me.Lb2.Location = New System.Drawing.Point(573, 94)
         Me.Lb2.Name = "Lb2"
+        Me.Lb2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.Lb2.Size = New System.Drawing.Size(161, 139)
         Me.Lb2.TabIndex = 9
         '
@@ -183,7 +185,7 @@ Partial Class FrmAltaPlato
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(63, 23)
         Me.Button4.TabIndex = 13
-        Me.Button4.Text = ">>"
+        Me.Button4.Text = "<<"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'BtnCancelar
@@ -262,7 +264,7 @@ Partial Class FrmAltaPlato
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FrmAltaPlato"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Añadir un plato"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

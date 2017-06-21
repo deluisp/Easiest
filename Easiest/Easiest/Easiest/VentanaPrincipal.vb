@@ -218,4 +218,10 @@ Public Class VentanaPrincipal
         FrmModificarPlato.MdiParent = Me
         FrmModificarPlato.Show()
     End Sub
+
+    Private Sub BtnIngredientesModificar_Click(sender As Object, e As EventArgs) Handles BtnIngredientesModificar.Click
+        Dim FrmModificarIngrediente As New FrmModificarIngrediente
+        FrmModificarIngrediente.MdiParent = Me
+        FrmModificarIngrediente.Show()
+    End Sub
 End Class
