@@ -12,18 +12,22 @@ Public Class UsuariosConsultaCompl
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
+        Try
+            cadenaSelect = txtConsulta.Text
+            cadenaTabla = txtTabla.Text
 
 
-        cadenaSelect = txtConsulta.Text
-        cadenaTabla = txtTabla.Text
+
+            oDataAdapter = New MySqlDataAdapter(cadenaSelect, Main.DBManager.OConexion)
+            oDataAdapter.Fill(oDataSet, cadenaTabla)
+            oDataAdapter = Nothing
+
+            GtdConsulta.DataSource = oDataSet.Tables(cadenaTabla)
+        Catch ex As Exception
+            MessageBox.Show("No puede estar los campos vacios")
+        End Try
 
 
-
-        oDataAdapter = New MySqlDataAdapter(cadenaSelect, Main.DBManager.OConexion)
-        oDataAdapter.Fill(oDataSet, cadenaTabla)
-        oDataAdapter = Nothing
-
-        GtdConsulta.DataSource = oDataSet.Tables(cadenaTabla)
 
     End Sub
 

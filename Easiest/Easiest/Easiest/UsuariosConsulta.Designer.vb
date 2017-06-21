@@ -67,11 +67,12 @@ Partial Class UsuariosConsulta
         Me.dtgDatos.ParentRowsForeColor = System.Drawing.Color.DarkSlateGray
         Me.dtgDatos.SelectionBackColor = System.Drawing.Color.SlateGray
         Me.dtgDatos.SelectionForeColor = System.Drawing.Color.White
-        Me.dtgDatos.Size = New System.Drawing.Size(780, 364)
+        Me.dtgDatos.Size = New System.Drawing.Size(780, 330)
         Me.dtgDatos.TabIndex = 0
         '
         'btnDatos
         '
+        Me.btnDatos.Enabled = False
         Me.btnDatos.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDatos.Location = New System.Drawing.Point(68, 191)
         Me.btnDatos.Name = "btnDatos"
@@ -142,6 +143,7 @@ Partial Class UsuariosConsulta
         Me.txtSelect.Location = New System.Drawing.Point(537, 62)
         Me.txtSelect.Multiline = True
         Me.txtSelect.Name = "txtSelect"
+        Me.txtSelect.ReadOnly = True
         Me.txtSelect.Size = New System.Drawing.Size(241, 83)
         Me.txtSelect.TabIndex = 16
         '
@@ -239,7 +241,7 @@ Partial Class UsuariosConsulta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(802, 667)
+        Me.ClientSize = New System.Drawing.Size(802, 605)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblNoDatos)
         Me.Controls.Add(Me.btnDatos)
