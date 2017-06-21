@@ -28,7 +28,7 @@ Public Class FrmModificarIngrediente
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        Main.ListaIngredientes.ModificarIngrediente(TxtNombre.Text, Main.ListaIngredientesTipos.GetId(CmbTipo.SelectedItem), TxtDescripcion.Text)
+        'Main.ListaIngredientes.ModificarIngrediente(TxtNombre.Text, Main.ListaIngredientesTipos.GetId(CmbTipo.SelectedItem), TxtDescripcion.Text)
         MessageBox.Show("Ingrediente modificado con exito")
         Me.Close()
     End Sub

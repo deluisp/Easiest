@@ -364,7 +364,7 @@ Partial Class FrmModificarUsuarios
         Me.MaximizeBox = False
         Me.Name = "FrmModificarUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmModificarUsuarios"
+        Me.Text = "Modificar usuarios"
         Me.GBType.ResumeLayout(False)
         Me.GBType.PerformLayout()
         Me.GBSeguridad.ResumeLayout(False)
