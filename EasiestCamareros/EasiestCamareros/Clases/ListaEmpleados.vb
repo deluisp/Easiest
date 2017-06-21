@@ -1,5 +1,5 @@
-﻿Public Class ListaEmpleados
-    Public Lista As New List(Of Empleado)
+﻿Public NotInheritable Class ListaEmpleados
+    Public Shared Lista As New List(Of Empleado)
     Public Sub New()
 
     End Sub

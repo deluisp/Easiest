@@ -35,7 +35,19 @@ Public Class FrmPedidos
 
     Private Sub btnLiberar_Click(sender As Object, e As EventArgs) Handles btnLiberar.Click
 
+        Dim IdPedido = Main.ListaPedidos.Nuevo(Now, 1, Main.EmpleadoActual)
+        Dim Leidos = New List(Of String)
 
+        For i = 0 To lbTicket.Items.Count - 1
+            If Not Leidos.Contains(lbTicket.Items(i).ToString) Then
+                Dim Contador As Integer = 0
+                For j = 0 To lbTicket.Items.Count - 1
+                    If lbTicket.Items(i) = lbTicket.Items(j) Then Contador = Contador + 1
+                Next
+                Main.ListaLineasPedido.Nuevo(IdPedido, Main.ListaPlatos.GetId(lbTicket.Items(i)), Contador)
+                Leidos.Add(lbTicket.Items(i).ToString)
+            End If
+        Next
 
         If TxtMesaAsignada.Text = "Mesa 01" Then
             Me.Close()

@@ -8,6 +8,8 @@ Module Main
     Public ListaIngredientes As New ListaIngredientes
     Public ListaPlatos As New ListaPlatos
     Public ListaPlatosIngredientes As New ListaPlatosIngredientes
+    Public ListaLineasPedido As New ListaLineasPedido
+    Public ListaPedidos As New ListaPedidos
 
     Public EmpleadoActual As Integer
 
@@ -25,6 +27,8 @@ Module Main
         ListaIngredientes = DBManager.CargarIngredientes
         ListaPlatos = DBManager.CargarPlatos
         ListaPlatosIngredientes = DBManager.CargarPlatosIngredientes
+        ListaLineasPedido = DBManager.CargarLineasPedido
+        ListaPedidos = DBManager.CargarPedidos
 
         FrmLogin = New LoginCamarero()
         FrmPrincipal = New EasiestCamareros()

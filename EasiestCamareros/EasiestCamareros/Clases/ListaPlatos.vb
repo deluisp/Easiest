@@ -76,6 +76,15 @@
         Return -1
     End Function
 
+    Public Function GetPrecio(ByVal Id As Integer) As Double
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Id = Id) Then
+                Return Lista(i).Precio
+            End If
+        Next
+        Return -1
+    End Function
+
     Public Function GetEsBebida(ByVal Nombre As String) As Integer
         For i = 0 To Lista.Count - 1
             If (Lista(i).Nombre = Nombre) Then
