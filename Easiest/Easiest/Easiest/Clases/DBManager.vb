@@ -332,6 +332,16 @@ Public NotInheritable Class DBManager
         ODataSet.Tables("platos").AcceptChanges()
     End Sub
 
+    Public Sub ModificarIngrediente(ByVal Pos As Integer, ByVal Ingrediente As Ingrediente)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM ingredientes", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataSet.Tables("ingredientes").Rows(Pos).Item("nombre") = Ingrediente.Nombre
+        ODataSet.Tables("ingredientes").Rows(Pos).Item("tipo") = Ingrediente.Tipo
+        ODataSet.Tables("ingredientes").Rows(Pos).Item("descripcion") = Ingrediente.Descripcion
+        ODataAdapter.Update(ODataSet, "ingredientes")
+        ODataSet.Tables("ingredientes").AcceptChanges()
+    End Sub
+
     Public Sub DeletePlato(ByVal Pos As Integer, ByVal Plato As Plato)
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)

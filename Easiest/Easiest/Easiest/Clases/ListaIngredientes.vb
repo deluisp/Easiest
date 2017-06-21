@@ -33,6 +33,15 @@
         Return Nothing
     End Function
 
+    Public Function GetDescripcion(ByVal Nombre As String) As String
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Nombre = Nombre) Then
+                Return Lista(i).Descripcion
+            End If
+        Next
+        Return Nothing
+    End Function
+
     Public Function GetNewId() As Integer
         Dim Nuevo As Integer = -1
         For i = 0 To Lista.Count - 1
@@ -55,6 +64,19 @@
         Main.DBManager.AddNewIngrediente(NuevoIngrediente)
     End Function
 
+    Public Function ModificarIngrediente(ByVal Id As Integer, ByVal NewNombre As String, ByVal NewTipo As Integer, ByVal NewDescripcion As String)
+        Dim Pos As Integer = GetPosIngrediente(Id)
+        If Pos = -1 Then Return 0
+
+        Lista(Pos).Nombre = NewNombre
+        Lista(Pos).Tipo = NewTipo
+        Lista(Pos).Descripcion = NewDescripcion
+
+
+        Main.DBManager.ModificarIngrediente(Pos, Lista(Pos))
+        Return 1
+    End Function
+
     Public Function Buscar(ByVal Nombre As String) As Integer
         For i = 0 To Lista.Count - 1
             If (Lista(i).Nombre = Nombre) Then
@@ -63,6 +85,17 @@
         Next
         Return False
     End Function
+
+    Public Function GetTipo(ByVal Nombre As String)
+        For i = 0 To Lista.Count - 1
+            If (Lista(i).Nombre = Nombre) Then
+                Return Lista(i).Tipo
+            End If
+        Next
+        Return Nothing
+    End Function
+
+
 
 
 End Class
