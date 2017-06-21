@@ -56,7 +56,24 @@ Public Class FrmAltaUsuarios
 
                 MessageBox.Show("Usuario añadido con exito")
                 Me.Close()
+            Else
+                MessageBox.Show("El usuario ya existe")
+                TxtUsuario.Text = ""
+                TxtClave.Text = ""
+                TxtEmail.Text = ""
+                BtnAltas01.Checked = False
+                BtnModificacion01.Checked = False
+                BtnBajas01.Checked = False
+                BtnConsultaA01.Checked = False
+                BtnConsultaB01.Checked = False
+                Opt01.Checked = False
+                Opt02.Checked = False
+                Opt03.Checked = False
+                Opt04.Checked = False
+                Opt05.Checked = False
             End If
+        Else
+            MessageBox.Show("No deje ningún campo vacio")
         End If
     End Sub
 

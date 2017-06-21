@@ -2,11 +2,16 @@
 
 Public Class FrmBajaUsuarios
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
-        TxtTipo.Text = Main.ListaUsuarios.GetTipoByPos(Main.ListaUsuarios.GetPosUsuario(TxtUsuario.Text))
-        TxtUltimaConexion.Text = Main.ListaLogs.GetUltimaConexion(Main.ListaUsuarios.GetId(TxtUsuario.Text))
-        TxtTipo.Enabled = True
-        TxtUltimaConexion.Enabled = True
-        BtnDarDeBaja.Enabled = True
+        Try
+            TxtTipo.Text = Main.ListaUsuarios.GetTipoByPos(Main.ListaUsuarios.GetPosUsuario(TxtUsuario.Text))
+            TxtUltimaConexion.Text = Main.ListaLogs.GetUltimaConexion(Main.ListaUsuarios.GetId(TxtUsuario.Text))
+            TxtTipo.Enabled = True
+            TxtUltimaConexion.Enabled = True
+            BtnDarDeBaja.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show("El usuario no existe")
+        End Try
+
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click

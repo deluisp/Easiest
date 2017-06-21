@@ -2,6 +2,9 @@
 
 Public Class FrmBajaEmpleados
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
+
+
+
         Main.ListaEmpleados.BorrarEmpleado(TxtDni.Text)
 
         MessageBox.Show("El empleado ha sido eliminado con exito")
@@ -35,7 +38,8 @@ Public Class FrmBajaEmpleados
             TxtSalario.Text = Main.ListaEmpleados.GetSalario(TxtDni.Text)
             TxtRestaurante.Text = Main.ListaEmpleados.GetRestaurante(TxtDni.Text)
 
-
+        Else
+            MessageBox.Show("No existe el empleado")
         End If
     End Sub
 
@@ -54,4 +58,5 @@ Public Class FrmBajaEmpleados
             e.Cancel = True
         End If
     End Sub
+
 End Class

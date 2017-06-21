@@ -175,7 +175,7 @@ Partial Class FrmModificarPlato
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(63, 23)
         Me.Button4.TabIndex = 34
-        Me.Button4.Text = ">>"
+        Me.Button4.Text = "<<"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3

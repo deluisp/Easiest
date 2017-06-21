@@ -81,6 +81,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtRestaurante.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRestaurante.Location = New System.Drawing.Point(145, 459)
         Me.TxtRestaurante.Name = "TxtRestaurante"
+        Me.TxtRestaurante.ReadOnly = True
         Me.TxtRestaurante.Size = New System.Drawing.Size(86, 22)
         Me.TxtRestaurante.TabIndex = 75
         '
@@ -89,6 +90,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtSalario.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSalario.Location = New System.Drawing.Point(145, 432)
         Me.TxtSalario.Name = "TxtSalario"
+        Me.TxtSalario.ReadOnly = True
         Me.TxtSalario.Size = New System.Drawing.Size(89, 22)
         Me.TxtSalario.TabIndex = 74
         '
@@ -97,6 +99,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtTrabajo.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTrabajo.Location = New System.Drawing.Point(145, 404)
         Me.TxtTrabajo.Name = "TxtTrabajo"
+        Me.TxtTrabajo.ReadOnly = True
         Me.TxtTrabajo.Size = New System.Drawing.Size(133, 22)
         Me.TxtTrabajo.TabIndex = 73
         '
@@ -105,6 +108,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtPais.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPais.Location = New System.Drawing.Point(145, 369)
         Me.TxtPais.Name = "TxtPais"
+        Me.TxtPais.ReadOnly = True
         Me.TxtPais.Size = New System.Drawing.Size(72, 22)
         Me.TxtPais.TabIndex = 72
         '
@@ -113,6 +117,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtCiudad.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCiudad.Location = New System.Drawing.Point(145, 343)
         Me.TxtCiudad.Name = "TxtCiudad"
+        Me.TxtCiudad.ReadOnly = True
         Me.TxtCiudad.Size = New System.Drawing.Size(113, 22)
         Me.TxtCiudad.TabIndex = 71
         '
@@ -121,6 +126,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtDireccion.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDireccion.Location = New System.Drawing.Point(145, 317)
         Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.ReadOnly = True
         Me.TxtDireccion.Size = New System.Drawing.Size(167, 22)
         Me.TxtDireccion.TabIndex = 70
         '
@@ -129,6 +135,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtTelefono.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelefono.Location = New System.Drawing.Point(145, 276)
         Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.ReadOnly = True
         Me.TxtTelefono.Size = New System.Drawing.Size(226, 22)
         Me.TxtTelefono.TabIndex = 69
         '
@@ -137,6 +144,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtEmail.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtEmail.Location = New System.Drawing.Point(145, 250)
         Me.TxtEmail.Name = "TxtEmail"
+        Me.TxtEmail.ReadOnly = True
         Me.TxtEmail.Size = New System.Drawing.Size(167, 22)
         Me.TxtEmail.TabIndex = 68
         '
@@ -145,6 +153,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtNacimiento.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNacimiento.Location = New System.Drawing.Point(145, 208)
         Me.TxtNacimiento.Name = "TxtNacimiento"
+        Me.TxtNacimiento.ReadOnly = True
         Me.TxtNacimiento.Size = New System.Drawing.Size(167, 22)
         Me.TxtNacimiento.TabIndex = 67
         '
@@ -161,6 +170,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtApellido.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtApellido.Location = New System.Drawing.Point(145, 182)
         Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.ReadOnly = True
         Me.TxtApellido.Size = New System.Drawing.Size(218, 22)
         Me.TxtApellido.TabIndex = 65
         '
@@ -169,6 +179,7 @@ Partial Class FrmModificarEmpleado
         Me.TxtNombre.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(145, 156)
         Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.ReadOnly = True
         Me.TxtNombre.Size = New System.Drawing.Size(149, 22)
         Me.TxtNombre.TabIndex = 64
         '

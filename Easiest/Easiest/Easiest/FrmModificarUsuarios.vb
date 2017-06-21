@@ -68,7 +68,7 @@ Public Class FrmModificarUsuarios
             If (Main.ListaPermisos.BuscarPermiso(Main.ListaUsuarios.GetId(TxtUsuario.Text), 5)) Then BtnConsultaA01.Checked = True
 
         Else
-            MessageBox.Show("No se muestra nada")
+            MessageBox.Show("No existe el usuario")
         End If
     End Sub
 
@@ -93,6 +93,8 @@ Public Class FrmModificarUsuarios
                 MessageBox.Show("Usuario modificado con exito")
                 Me.Close()
             End If
+        Else
+            MessageBox.Show("Hay campos vacios")
         End If
 
 

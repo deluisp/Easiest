@@ -8,7 +8,14 @@ Public Class FrmModificarClave
                 Main.DBManager.UpdateUsuarios()
                 MessageBox.Show("Clave modificada con éxito, el formulario se cerrará")
                 Me.Close()
+            Else
+                MessageBox.Show("El usuario no existe")
+                TxtActual.Text = ""
+                TxtNueva.Text = ""
+                TxtConfirmacion.Text = ""
             End If
+        Else
+            MessageBox.Show("No deben quedar campos vacios")
         End If
     End Sub
 

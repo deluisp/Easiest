@@ -87,16 +87,18 @@ Partial Class FrmBajaEmpleados
         'TxtNacimiento
         '
         Me.TxtNacimiento.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNacimiento.Location = New System.Drawing.Point(227, 239)
+        Me.TxtNacimiento.Location = New System.Drawing.Point(227, 224)
         Me.TxtNacimiento.Name = "TxtNacimiento"
+        Me.TxtNacimiento.ReadOnly = True
         Me.TxtNacimiento.Size = New System.Drawing.Size(105, 22)
         Me.TxtNacimiento.TabIndex = 87
         '
         'TxtApellido
         '
         Me.TxtApellido.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtApellido.Location = New System.Drawing.Point(227, 201)
+        Me.TxtApellido.Location = New System.Drawing.Point(227, 196)
         Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.ReadOnly = True
         Me.TxtApellido.Size = New System.Drawing.Size(218, 22)
         Me.TxtApellido.TabIndex = 86
         '
@@ -105,6 +107,7 @@ Partial Class FrmBajaEmpleados
         Me.TxtNombre.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(227, 167)
         Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.ReadOnly = True
         Me.TxtNombre.Size = New System.Drawing.Size(149, 22)
         Me.TxtNombre.TabIndex = 85
         '
@@ -112,7 +115,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(90, 246)
+        Me.Label3.Location = New System.Drawing.Point(90, 231)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(130, 15)
         Me.Label3.TabIndex = 84
@@ -122,7 +125,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(90, 208)
+        Me.Label2.Location = New System.Drawing.Point(90, 203)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 15)
         Me.Label2.TabIndex = 83
@@ -141,16 +144,18 @@ Partial Class FrmBajaEmpleados
         'TxtTelefono
         '
         Me.TxtTelefono.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTelefono.Location = New System.Drawing.Point(227, 312)
+        Me.TxtTelefono.Location = New System.Drawing.Point(227, 291)
         Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.ReadOnly = True
         Me.TxtTelefono.Size = New System.Drawing.Size(149, 22)
         Me.TxtTelefono.TabIndex = 91
         '
         'TxtEmail
         '
         Me.TxtEmail.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmail.Location = New System.Drawing.Point(227, 277)
+        Me.TxtEmail.Location = New System.Drawing.Point(227, 265)
         Me.TxtEmail.Name = "TxtEmail"
+        Me.TxtEmail.ReadOnly = True
         Me.TxtEmail.Size = New System.Drawing.Size(218, 22)
         Me.TxtEmail.TabIndex = 90
         '
@@ -158,7 +163,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(90, 319)
+        Me.Label9.Location = New System.Drawing.Point(90, 298)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(59, 15)
         Me.Label9.TabIndex = 89
@@ -168,7 +173,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(90, 284)
+        Me.Label5.Location = New System.Drawing.Point(90, 272)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 15)
         Me.Label5.TabIndex = 88
@@ -177,24 +182,27 @@ Partial Class FrmBajaEmpleados
         'TxtPais
         '
         Me.TxtPais.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPais.Location = New System.Drawing.Point(227, 432)
+        Me.TxtPais.Location = New System.Drawing.Point(227, 391)
         Me.TxtPais.Name = "TxtPais"
+        Me.TxtPais.ReadOnly = True
         Me.TxtPais.Size = New System.Drawing.Size(105, 22)
         Me.TxtPais.TabIndex = 97
         '
         'TxtCiudad
         '
         Me.TxtCiudad.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCiudad.Location = New System.Drawing.Point(227, 397)
+        Me.TxtCiudad.Location = New System.Drawing.Point(227, 363)
         Me.TxtCiudad.Name = "TxtCiudad"
+        Me.TxtCiudad.ReadOnly = True
         Me.TxtCiudad.Size = New System.Drawing.Size(149, 22)
         Me.TxtCiudad.TabIndex = 96
         '
         'TxtDireccion
         '
         Me.TxtDireccion.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDireccion.Location = New System.Drawing.Point(227, 361)
+        Me.TxtDireccion.Location = New System.Drawing.Point(227, 335)
         Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.ReadOnly = True
         Me.TxtDireccion.Size = New System.Drawing.Size(218, 22)
         Me.TxtDireccion.TabIndex = 95
         '
@@ -202,7 +210,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(90, 439)
+        Me.Label8.Location = New System.Drawing.Point(90, 398)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(33, 15)
         Me.Label8.TabIndex = 94
@@ -212,7 +220,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(90, 404)
+        Me.Label7.Location = New System.Drawing.Point(90, 370)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(50, 15)
         Me.Label7.TabIndex = 93
@@ -222,7 +230,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(90, 368)
+        Me.Label6.Location = New System.Drawing.Point(90, 342)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(64, 15)
         Me.Label6.TabIndex = 92
@@ -231,24 +239,27 @@ Partial Class FrmBajaEmpleados
         'TxtRestaurante
         '
         Me.TxtRestaurante.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRestaurante.Location = New System.Drawing.Point(227, 559)
+        Me.TxtRestaurante.Location = New System.Drawing.Point(227, 489)
         Me.TxtRestaurante.Name = "TxtRestaurante"
+        Me.TxtRestaurante.ReadOnly = True
         Me.TxtRestaurante.Size = New System.Drawing.Size(59, 22)
         Me.TxtRestaurante.TabIndex = 103
         '
         'TxtSalario
         '
         Me.TxtSalario.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSalario.Location = New System.Drawing.Point(227, 521)
+        Me.TxtSalario.Location = New System.Drawing.Point(227, 461)
         Me.TxtSalario.Name = "TxtSalario"
+        Me.TxtSalario.ReadOnly = True
         Me.TxtSalario.Size = New System.Drawing.Size(105, 22)
         Me.TxtSalario.TabIndex = 102
         '
         'TxtTrabajo
         '
         Me.TxtTrabajo.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTrabajo.Location = New System.Drawing.Point(227, 484)
+        Me.TxtTrabajo.Location = New System.Drawing.Point(227, 433)
         Me.TxtTrabajo.Name = "TxtTrabajo"
+        Me.TxtTrabajo.ReadOnly = True
         Me.TxtTrabajo.Size = New System.Drawing.Size(81, 22)
         Me.TxtTrabajo.TabIndex = 101
         '
@@ -256,7 +267,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(90, 566)
+        Me.Label12.Location = New System.Drawing.Point(90, 496)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(77, 15)
         Me.Label12.TabIndex = 100
@@ -266,7 +277,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(90, 528)
+        Me.Label11.Location = New System.Drawing.Point(90, 468)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(49, 15)
         Me.Label11.TabIndex = 99
@@ -276,7 +287,7 @@ Partial Class FrmBajaEmpleados
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(90, 491)
+        Me.Label10.Location = New System.Drawing.Point(90, 440)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 15)
         Me.Label10.TabIndex = 98
@@ -285,7 +296,7 @@ Partial Class FrmBajaEmpleados
         'BtnCancelar
         '
         Me.BtnCancelar.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.Location = New System.Drawing.Point(305, 623)
+        Me.BtnCancelar.Location = New System.Drawing.Point(305, 547)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(200, 23)
         Me.BtnCancelar.TabIndex = 105
@@ -295,7 +306,7 @@ Partial Class FrmBajaEmpleados
         'BtnBorrar
         '
         Me.BtnBorrar.Font = New System.Drawing.Font("Tempus Sans ITC", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBorrar.Location = New System.Drawing.Point(12, 623)
+        Me.BtnBorrar.Location = New System.Drawing.Point(12, 547)
         Me.BtnBorrar.Name = "BtnBorrar"
         Me.BtnBorrar.Size = New System.Drawing.Size(206, 23)
         Me.BtnBorrar.TabIndex = 104
@@ -329,7 +340,7 @@ Partial Class FrmBajaEmpleados
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(517, 658)
+        Me.ClientSize = New System.Drawing.Size(517, 581)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnBorrar)

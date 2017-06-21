@@ -14,7 +14,23 @@ Public Class FrmAltaEmpleado
 
                 MessageBox.Show("Empleado añadido con exito")
                 Me.Close()
+            Else
+                MessageBox.Show("No existe empleado")
+                TxtNombre.Text = ""
+                TxtApellido.Text = ""
+                TxtDni.Text = ""
+                TxtNacimiento.Text = ""
+                TxtEmail.Text = ""
+                TxtTelefono.Text = ""
+                TxtCiudad.Text = ""
+                TxtCiudad.Text = ""
+                TxtPais.Text = ""
+                TxtTrabajo.Text = ""
+                TxtSalario.Text = ""
+                TxtRestaurante.Text = ""
             End If
+        Else
+            MessageBox.Show("No se pueden dejar campos en blanco")
         End If
     End Sub
 

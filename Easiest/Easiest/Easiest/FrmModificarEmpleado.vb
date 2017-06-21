@@ -16,6 +16,21 @@ Public Class FrmModificarEmpleado
             TxtSalario.Text = Main.ListaEmpleados.GetSalario(TxtDni.Text)
             TxtRestaurante.Text = Main.ListaEmpleados.GetRestaurante(TxtDni.Text)
 
+            TxtNombre.ReadOnly = False
+            TxtApellido.ReadOnly = False
+            TxtDni.ReadOnly = False
+            TxtNacimiento.ReadOnly = False
+            TxtEmail.ReadOnly = False
+            TxtTelefono.ReadOnly = False
+            TxtCiudad.ReadOnly = False
+            TxtDireccion.ReadOnly = False
+            TxtPais.ReadOnly = False
+            TxtTrabajo.ReadOnly = False
+            TxtSalario.ReadOnly = False
+            TxtRestaurante.ReadOnly = False
+
+        Else
+            MessageBox.Show("El empleado no existe")
 
         End If
     End Sub
@@ -28,6 +43,8 @@ Public Class FrmModificarEmpleado
 
             MessageBox.Show("Empleado modificado con exito, se cerrará el formulario.")
             Me.Close()
+        Else
+            MessageBox.Show("No se pueden dejar campos en blanco")
         End If
     End Sub
 
@@ -45,5 +62,9 @@ Public Class FrmModificarEmpleado
         If resul = vbNo Then
             e.Cancel = True
         End If
+    End Sub
+
+    Private Sub FrmModificarEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

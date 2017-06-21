@@ -19,10 +19,17 @@ Public Class FrmAltaPlato
     End Sub
 
     Private Sub BtnAnadir_Click(sender As Object, e As EventArgs) Handles BtnAnadir.Click
-        Dim IdPlato = Main.ListaPlatos.Nuevo(TxtNombre.Text, TxtDescripcion.Text, RdbBebida.Checked, TxtPrecio.Text)
-        For i = 0 To Lb2.Items.Count - 1
-            Main.ListaPlatosIngredientes.Nuevo(IdPlato, Main.ListaIngredientes.Buscar(Lb2.Items(i).ToString))
-        Next
+        Try
+            Dim IdPlato = Main.ListaPlatos.Nuevo(TxtNombre.Text, TxtDescripcion.Text, RdbBebida.Checked, TxtPrecio.Text)
+            For i = 0 To Lb2.Items.Count - 1
+                Main.ListaPlatosIngredientes.Nuevo(IdPlato, Main.ListaIngredientes.Buscar(Lb2.Items(i).ToString))
+                MessageBox.Show("Plato añadido con exito")
+                Me.Close()
+            Next
+        Catch ex As Exception
+            MessageBox.Show("No se pueden dejar campos en blanco")
+        End Try
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
