@@ -224,4 +224,10 @@ Public Class VentanaPrincipal
         FrmModificarIngrediente.MdiParent = Me
         FrmModificarIngrediente.Show()
     End Sub
+
+    Private Sub BtnPlatosEliminar_Click(sender As Object, e As EventArgs) Handles BtnPlatosEliminar.Click
+        Dim FrmBajaPlato As New FrmBajaPlato
+        FrmBajaPlato.MdiParent = Me
+        FrmBajaPlato.Show()
+    End Sub
 End Class

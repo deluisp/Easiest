@@ -284,21 +284,21 @@ Partial Class VentanaPrincipal
         '
         Me.BtnIngredientesAnadir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnIngredientesAnadir.Name = "BtnIngredientesAnadir"
-        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesAnadir.Size = New System.Drawing.Size(133, 22)
         Me.BtnIngredientesAnadir.Text = "Añadir"
         '
         'BtnIngredientesModificar
         '
         Me.BtnIngredientesModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnIngredientesModificar.Name = "BtnIngredientesModificar"
-        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesModificar.Size = New System.Drawing.Size(133, 22)
         Me.BtnIngredientesModificar.Text = "Modificar"
         '
         'BtnIngredientesEliminar
         '
         Me.BtnIngredientesEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnIngredientesEliminar.Name = "BtnIngredientesEliminar"
-        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(152, 22)
+        Me.BtnIngredientesEliminar.Size = New System.Drawing.Size(133, 22)
         Me.BtnIngredientesEliminar.Text = "Eliminar"
         '
         'PlatosToolStripMenuItem
@@ -313,21 +313,21 @@ Partial Class VentanaPrincipal
         '
         Me.BtnPlatosAnadir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnPlatosAnadir.Name = "BtnPlatosAnadir"
-        Me.BtnPlatosAnadir.Size = New System.Drawing.Size(133, 22)
+        Me.BtnPlatosAnadir.Size = New System.Drawing.Size(152, 22)
         Me.BtnPlatosAnadir.Text = "Añadir"
         '
         'BtnPlatosModificar
         '
         Me.BtnPlatosModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnPlatosModificar.Name = "BtnPlatosModificar"
-        Me.BtnPlatosModificar.Size = New System.Drawing.Size(133, 22)
+        Me.BtnPlatosModificar.Size = New System.Drawing.Size(152, 22)
         Me.BtnPlatosModificar.Text = "Modificar"
         '
         'BtnPlatosEliminar
         '
         Me.BtnPlatosEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnPlatosEliminar.Name = "BtnPlatosEliminar"
-        Me.BtnPlatosEliminar.Size = New System.Drawing.Size(133, 22)
+        Me.BtnPlatosEliminar.Size = New System.Drawing.Size(152, 22)
         Me.BtnPlatosEliminar.Text = "Eliminar"
         '
         'EditMenu

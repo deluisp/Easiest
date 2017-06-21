@@ -50,7 +50,7 @@ Public Class FrmModificarPlato
                 Bebida = 1
             End If
             Dim Id As Integer = Main.ListaPlatos.GetId(CmbPlatos.SelectedItem.ToString)
-            Main.ListaPlatosIngredientes.BorrarIngredientes(Id)
+            'Main.ListaPlatosIngredientes.BorrarIngredientes(Id)
             Main.ListaPlatos.ModificarPlato(Id, TxtNombre.Text, TxtDescripcion.Text, Bebida, TxtPrecio.Text)
             For i = 0 To Lb2.Items.Count - 1
                 Main.ListaPlatosIngredientes.Nuevo(Id, Main.ListaIngredientes.Buscar(Lb2.Items(i).ToString))

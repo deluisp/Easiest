@@ -230,7 +230,7 @@
         For i = 0 To Lista.Count - 1
             If (Lista(i).DNI = DNI) Then
                 Lista.RemoveAt(i)
-                Main.DBManager.DeleteUsuario(i)
+                Main.DBManager.DeleteEmpleado(i)
                 Return 1
             End If
         Next

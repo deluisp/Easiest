@@ -105,4 +105,13 @@
         Main.DBManager.ModificarPlato(Pos, Lista(Pos))
         Return 1
     End Function
+
+    Public Function EliminarPlato(ByVal Id As Integer, ByVal NewNombre As String, ByVal NewDescripcion As String, ByVal NewEsBebida As String, ByVal NewPrecio As Double) As Integer
+        Dim Pos As Integer = GetPosPlato(Id)
+        If Pos = -1 Then Return 0
+
+        Main.DBManager.DeletePlato(Pos, Lista(Pos))
+        Return 1
+
+    End Function
 End Class

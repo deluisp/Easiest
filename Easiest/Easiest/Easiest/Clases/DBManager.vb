@@ -332,6 +332,15 @@ Public NotInheritable Class DBManager
         ODataSet.Tables("platos").AcceptChanges()
     End Sub
 
+    Public Sub DeletePlato(ByVal Pos As Integer, ByVal Plato As Plato)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataSet.Tables("platos").Rows(Pos).Delete()
+        ODataAdapter.Update(ODataSet, "platos")
+        ODataSet.Tables("platos").AcceptChanges()
+    End Sub
+
+
     Public Sub DeletePermiso(ByVal Pos As Integer)
         ' Controlar si eso
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM permisos", OConexion)
