@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 19-06-2017 a las 17:26:48
+-- Tiempo de generación: 21-06-2017 a las 19:26:50
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -67,6 +67,13 @@ CREATE TABLE IF NOT EXISTS `empleados` (
   `restaurante` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id`, `dni`, `nombre`, `apellido`, `fechnac`, `email`, `direccion`, `ciudad`, `pais`, `telefono`, `trabajo`, `salario`, `restaurante`) VALUES
+(0, '02717657t', 'Pablo', 'de Luis Duarte', '2017-02-03', 'deluisp@gmail.com', 'Avda.Bruselas 41', 'Madrid', 'España', 626842423, 'Camarero', 20000, 1);
 
 -- --------------------------------------------------------
 
@@ -267,8 +274,7 @@ INSERT INTO `ingredientes` (`id`, `nombre`, `tipo`, `descripcion`) VALUES
 (178, 'Dorada', 30, 'Proteinas (g) 	17\nGrasas (g) 	2.7\nG. saturadas (g) 	0.5\nG. monoinsaturadas (g) 	0.8\nG. poliinsaturadas (g) 	0.5\nHierro (mg) 	0.9\nMagnesio (mg) 	25\nPotasio (mg) 	300\nFosforo (mg) 	180\nB3 o niacina (mg) 	5\nB12 o cianocobalamina (mcg) 	2\nVitamina A (mcg) 	9\nVitmamina E (mg) 	1.25'),
 (179, 'Perca', 29, 'Proteinas (g) 	18.4\nGrasas (g) 	0.8\nHierro (mg) 	1\nPotasio (mg) 	330\nFosforo (mg) 	198\nMagnesio (mg) 	20\nB1 o Tiamina (mg) 	0.08\nB2 o Riboflavina (mg) 	0.12\nB3 o Niacina (mg) 	1.74\nVitamina A (mcg) 	7'),
 (180, 'Bagre', 30, 'Valor calorico 	144 kcal 603 kJ\nGrasas 	7.2 g\nGrasas saturadas 	1.6 g\nGrasas monoinsaturadas 	3.1 g\nGrasas poliinsaturadas 	1.4 g\nCarbohidratos 	0.0 g\nAzucares 	0.0 g\nProteinas 	18.4 g\nFibra alimentaria 	0.0 g\nColesterol 	66.0 mg\nSodio 	0.1 g\nAgua 	74.7 g'),
-(181, 'Arenques', 30, 'Valor calorico 	217 kcal 909 kJ\nGrasas 	12.4 g\nGrasas saturadas 	2.8 g\nGrasas monoinsaturadas 	5.1 g\nGrasas poliinsaturadas 	2.9 g\nCarbohidratos 	0.0 g\nAzucares 	0.0 g\nProteinas 	24.6 g\nFibra alimentaria 	0.0 g\nColesterol 	82.0 mg\nSodio 	0.9 g\nAgua 	59.7 g'),
-(182, 'IngredientePrueba', 26, 'asdfasdfjhñlasdfjñasflj');
+(181, 'Arenques', 30, 'Valor calorico 	217 kcal 909 kJ\nGrasas 	12.4 g\nGrasas saturadas 	2.8 g\nGrasas monoinsaturadas 	5.1 g\nGrasas poliinsaturadas 	2.9 g\nCarbohidratos 	0.0 g\nAzucares 	0.0 g\nProteinas 	24.6 g\nFibra alimentaria 	0.0 g\nColesterol 	82.0 mg\nSodio 	0.9 g\nAgua 	59.7 g');
 
 -- --------------------------------------------------------
 
@@ -345,6 +351,28 @@ INSERT INTO `ingredientes_tipos` (`id`, `nombre`, `categoria`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `lineas_pedido`
+--
+
+CREATE TABLE IF NOT EXISTS `lineas_pedido` (
+  `id` int(11) NOT NULL,
+  `id_pedido` int(11) NOT NULL,
+  `id_plato` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `total` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `lineas_pedido`
+--
+
+INSERT INTO `lineas_pedido` (`id`, `id_pedido`, `id_plato`, `cantidad`, `total`) VALUES
+(0, 0, 0, 3, 12.75),
+(1, 0, 1, 1, 2.25);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `logs`
 --
 
@@ -354,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `fechaInicio` datetime NOT NULL,
   `fechaFin` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=120 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=145 ;
 
 --
 -- Volcado de datos para la tabla `logs`
@@ -427,7 +455,52 @@ INSERT INTO `logs` (`id`, `idUsuario`, `fechaInicio`, `fechaFin`) VALUES
 (116, 9, '2017-06-17 19:40:09', '2017-06-17 19:40:26'),
 (117, 9, '2017-06-17 19:44:31', '2017-06-17 19:45:12'),
 (118, 9, '2017-06-17 19:47:23', '2017-06-17 19:48:19'),
-(119, 9, '2017-06-19 19:15:46', '2017-06-19 19:19:44');
+(119, 8, '2017-02-01 17:17:47', '2017-06-18 12:21:34'),
+(120, 9, '2017-06-18 12:21:46', '2017-06-18 12:22:03'),
+(121, 8, '2017-02-01 17:17:47', '2017-06-18 12:31:12'),
+(122, 9, '2017-06-18 12:31:56', '2017-06-18 12:32:17'),
+(123, 9, '2017-06-18 12:32:33', '2017-06-18 12:33:03'),
+(124, 9, '2017-06-18 12:34:25', '2017-06-18 12:34:35'),
+(125, 9, '2017-06-18 12:35:05', '2017-06-18 12:35:09'),
+(126, 9, '2017-06-18 12:35:20', '2017-06-18 12:35:34'),
+(127, 8, '2017-02-01 17:17:47', '2017-06-18 12:52:24'),
+(128, 9, '2017-06-18 12:56:26', '2017-06-18 12:56:59'),
+(129, 9, '2017-06-18 12:58:05', '2017-06-18 12:59:03'),
+(130, 9, '2017-06-18 13:01:50', '2017-06-18 13:02:17'),
+(131, 9, '2017-06-18 13:02:54', '2017-06-18 13:05:40'),
+(132, 9, '2017-06-18 18:11:07', '2017-06-18 18:11:26'),
+(133, 9, '2017-06-18 18:12:48', '2017-06-18 18:13:45'),
+(134, 9, '2017-06-18 18:34:50', '2017-06-18 18:34:54'),
+(135, 9, '2017-06-18 18:35:36', '2017-06-18 18:36:09'),
+(136, 9, '2017-06-18 18:36:39', '2017-06-18 18:36:50'),
+(137, 9, '2017-06-18 18:50:41', '2017-06-18 18:50:55'),
+(138, 9, '2017-06-18 18:57:29', '2017-06-18 18:57:47'),
+(139, 9, '2017-06-18 18:58:20', '2017-06-18 18:58:48'),
+(140, 9, '2017-06-18 19:06:26', '2017-06-18 19:07:20'),
+(141, 9, '2017-06-18 19:07:40', '2017-06-18 19:08:34'),
+(142, 9, '2017-06-18 19:09:21', '2017-06-18 19:09:35'),
+(143, 9, '2017-06-18 19:48:37', '2017-06-18 19:49:38'),
+(144, 9, '2017-06-20 19:50:22', '2017-06-20 19:50:40');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pedidos`
+--
+
+CREATE TABLE IF NOT EXISTS `pedidos` (
+  `id` int(11) NOT NULL,
+  `fecha` date NOT NULL,
+  `mesa` int(11) NOT NULL,
+  `id_empleado` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `fecha`, `mesa`, `id_empleado`) VALUES
+(0, '2017-06-21', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -464,20 +537,22 @@ INSERT INTO `permisos` (`id`, `idUsuario`, `tipo`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `platos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
   `esbebida` int(11) NOT NULL,
   `precio` double NOT NULL,
+  `tipo` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `platos`
 --
 
-INSERT INTO `platos` (`id`, `nombre`, `descripcion`, `esbebida`, `precio`) VALUES
-(1, 'Prueba', 'asdfasdfasdf', 0, 4.25);
+INSERT INTO `platos` (`id`, `nombre`, `descripcion`, `esbebida`, `precio`, `tipo`) VALUES
+(0, 'prueba3', 'assdf', 0, 4.25, 1),
+(1, 'ahorasoybebida', 'cambio la descriupcion y la bebida', 1, 2.25, 5);
 
 -- --------------------------------------------------------
 
@@ -495,9 +570,10 @@ CREATE TABLE IF NOT EXISTS `platos_ingredientes` (
 --
 
 INSERT INTO `platos_ingredientes` (`id_plato`, `id_ingrediente`) VALUES
+(0, 1),
 (1, 1),
-(1, 2),
-(1, 3);
+(1, 4),
+(1, 6);
 
 -- --------------------------------------------------------
 

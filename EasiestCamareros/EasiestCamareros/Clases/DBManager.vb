@@ -30,14 +30,49 @@ Public NotInheritable Class DBManager
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
         OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
         ODataAdapter.Fill(ODataSet, "platos_ingredientes")
-        'ODataAdapter = New MySqlDataAdapter("SELECT * FROM pedidos", OConexion)
-        'OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
-        'ODataAdapter.Fill(ODataSet, "pedidos")
-        'ODataAdapter = New MySqlDataAdapter("SELECT * FROM lineas_pedido", OConexion)
-        'OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
-        'ODataAdapter.Fill(ODataSet, "lineas_pedidos")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM pedidos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "pedidos")
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM lineas_pedido", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+        ODataAdapter.Fill(ODataSet, "lineas_pedido")
         OConexion.Close()
     End Sub
+
+    Public Function CargarLineasPedido() As ListaLineasPedido
+        Dim ListaLineasPedido As New ListaLineasPedido
+        Try
+            For contador = 0 To ODataSet.Tables("lineas_pedido").Rows.Count - 1
+                Dim NuevaLineaPedido As New LineaPedido
+                NuevaLineaPedido.Id = ODataSet.Tables("lineas_pedido").Rows(contador).Item("id")
+                NuevaLineaPedido.IdPedido = ODataSet.Tables("lineas_pedido").Rows(contador).Item("id_pedido")
+                NuevaLineaPedido.IdPlato = ODataSet.Tables("lineas_pedido").Rows(contador).Item("id_plato")
+                NuevaLineaPedido.Cantidad = ODataSet.Tables("lineas_pedido").Rows(contador).Item("cantidad")
+                NuevaLineaPedido.Total = ODataSet.Tables("lineas_pedido").Rows(contador).Item("total")
+                ListaLineasPedido.Lista.Add(NuevaLineaPedido)
+            Next
+        Catch ex As Exception
+
+        End Try
+        Return ListaLineasPedido
+    End Function
+
+    Public Function CargarPedidos() As ListaPedidos
+        Dim ListaPedidos As New ListaPedidos
+        Try
+            For contador = 0 To ODataSet.Tables("pedidos").Rows.Count - 1
+                Dim NuevoPedido As New Pedido
+                NuevoPedido.Id = ODataSet.Tables("pedidos").Rows(contador).Item("id")
+                NuevoPedido.Fecha = ODataSet.Tables("pedidos").Rows(contador).Item("fecha")
+                NuevoPedido.Mesa = ODataSet.Tables("pedidos").Rows(contador).Item("mesa")
+                NuevoPedido.Empleado = ODataSet.Tables("pedidos").Rows(contador).Item("id_empleado")
+                ListaPedidos.Lista.Add(NuevoPedido)
+            Next
+        Catch ex As Exception
+
+        End Try
+        Return ListaPedidos
+    End Function
 
     Public Function CargarPlatos() As ListaPlatos
         Dim ListaPlatos As New ListaPlatos
@@ -158,6 +193,40 @@ Public NotInheritable Class DBManager
         ODataAdapter.Update(ODataSet, "platos")
         ODataSet.Tables("platos").AcceptChanges()
     End Sub
+
+    Public Sub AddNewPedido(ByVal Pedido As Pedido)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM pedidos", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+
+        Dim ODataRow As DataRow
+        ODataRow = ODataSet.Tables("pedidos").NewRow
+        ODataRow("id") = Pedido.Id
+        ODataRow("fecha") = Pedido.Fecha
+        ODataRow("mesa") = Pedido.Mesa
+        ODataRow("id_empleado") = Pedido.Empleado
+        ODataSet.Tables("pedidos").Rows.Add(ODataRow)
+
+        ODataAdapter.Update(ODataSet, "pedidos")
+        ODataSet.Tables("pedidos").AcceptChanges()
+    End Sub
+
+    Public Sub AddNewLineaPedido(ByVal LineaPedido As LineaPedido)
+        ODataAdapter = New MySqlDataAdapter("SELECT * FROM lineas_pedido", OConexion)
+        OCommandBuilder = New MySqlCommandBuilder(ODataAdapter)
+
+        Dim ODataRow As DataRow
+        ODataRow = ODataSet.Tables("lineas_pedido").NewRow
+        ODataRow("id") = LineaPedido.Id
+        ODataRow("id_pedido") = LineaPedido.IdPedido
+        ODataRow("id_plato") = LineaPedido.IdPlato
+        ODataRow("cantidad") = LineaPedido.Cantidad
+        ODataRow("total") = LineaPedido.Total
+        ODataSet.Tables("lineas_pedido").Rows.Add(ODataRow)
+
+        ODataAdapter.Update(ODataSet, "lineas_pedido")
+        ODataSet.Tables("lineas_pedido").AcceptChanges()
+    End Sub
+
 
     Public Sub AddNewPlatoIngrediente(ByVal PlatoIngrediente As PlatoIngrediente)
         ODataAdapter = New MySqlDataAdapter("SELECT * FROM platos_ingredientes", OConexion)
