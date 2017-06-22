@@ -109,7 +109,7 @@ Partial Class LoginCamarero
         Me.Controls.Add(Me.LogoPictureBox)
         Me.Font = New System.Drawing.Font("Century Schoolbook", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Teal
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False

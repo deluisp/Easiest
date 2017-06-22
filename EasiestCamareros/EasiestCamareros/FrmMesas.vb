@@ -1,4 +1,6 @@
-﻿Public Class FrmMesas
+﻿Imports System.ComponentModel
+
+Public Class FrmMesas
 
     Private Sub btnAsignar01_Click(sender As Object, e As EventArgs) Handles btnAsignar01.Click
         FrmPedidos.TxtMesaAsignada.Text = "Mesa 01"
@@ -147,51 +149,11 @@
         btnLiberar09.Enabled = False
     End Sub
 
-    Private Sub mesa05_Click(sender As Object, e As EventArgs) Handles mesa05.Click
-
-    End Sub
-
-    Private Sub mesa02_Click(sender As Object, e As EventArgs) Handles mesa02.Click
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
-    End Sub
-
-    Private Sub mesa08_Click(sender As Object, e As EventArgs) Handles mesa08.Click
-
-    End Sub
-
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-
-    End Sub
-
-    Private Sub mesa06_Click(sender As Object, e As EventArgs) Handles mesa06.Click
-
-    End Sub
-
-    Private Sub mesa03_Click(sender As Object, e As EventArgs) Handles mesa03.Click
-
-    End Sub
-
-    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
-
-    End Sub
-
-    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-
-    End Sub
-
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
-
-    End Sub
-
-    Private Sub mesa09_Click(sender As Object, e As EventArgs) Handles mesa09.Click
-
+    Private Sub FrmMesas_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
     End Sub
 End Class

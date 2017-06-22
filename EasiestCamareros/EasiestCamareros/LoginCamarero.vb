@@ -1,3 +1,5 @@
+Imports System.ComponentModel
+
 Public Class LoginCamarero
 
     ' TODO: inserte el código para realizar autenticación personalizada usando el nombre de usuario y la contraseña proporcionada 
@@ -28,6 +30,7 @@ Public Class LoginCamarero
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+        MessageBox.Show("Cerrando aplicación", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Application.ExitThread()
     End Sub
 
@@ -35,4 +38,5 @@ Public Class LoginCamarero
         Pos = -1
         Main.EmpleadoActual = -1
     End Sub
+
 End Class

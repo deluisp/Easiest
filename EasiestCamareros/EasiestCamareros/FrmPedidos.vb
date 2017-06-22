@@ -176,4 +176,11 @@ Public Class FrmPedidos
         txtTotal.Text = Precio * 1.21
     End Sub
 
+    Private Sub FrmPedidos_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resul As Byte
+        resul = MessageBox.Show("El formulario se va a cerrar", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        If resul = vbNo Then
+            e.Cancel = True
+        End If
+    End Sub
 End Class
